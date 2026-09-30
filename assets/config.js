@@ -10,7 +10,7 @@ window.BH_CONFIG = {
   //   2. Share → General access: "Anyone with the link" → Viewer → Copy link
   //      (or, on a computer: File → Share → Publish to web → "Menu" tab → CSV)
   //   3. Paste that link below. Sheet edits show on the site within a minute or so.
-  sheetCsvUrl: "https://docs.google.com/spreadsheets/d/e/2PACX-1vRtbu7XI00VrBMnHXjIo19qZAdmjCA5rEY6OoNnzVunjL6dQDd6jIwM28aTI9GvUg/pubhtml",
+  sheetCsvUrl: "https://docs.google.com/spreadsheets/d/e/2PACX-1vRtbu7XI00VrBMnHXjIo19qZAdmjCA5rEY6OoNnzVunjL6dQDd6jIwM28aTI9GvUg/pub?output=csv",
 
   // true shows an "All concepts" button on every page (used while presenting the designs).
   // The Tiles design was chosen, so it's off. The overview is still at /concepts/.
