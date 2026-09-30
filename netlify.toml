@@ -16,15 +16,6 @@
   status = 404
   force = true
 
-# When the customer has chosen a design, uncomment ONE of these so the
-# QR code / main address opens that menu directly (and set demo: false in assets/config.js).
-# The concept overview stays reachable at /concepts.html if you rename index.html.
-#
-# [[redirects]]
-#   from = "/"
-#   to = "/scroll/"
-#   status = 200
-
 # Menu data must always be fresh; fonts & images can be cached
 [[headers]]
   for = "/data/*"

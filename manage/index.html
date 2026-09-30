@@ -104,7 +104,7 @@
     <div class="status" id="status"><span class="dot"></span><span id="status-t">Loading…</span></div>
     <div class="row">
       <select class="f" id="preview-sel" style="width:auto" aria-label="Preview design">
-        <option value="scroll">Preview: Scroll</option><option value="tiles">Preview: Tiles</option><option value="editorial">Preview: Editorial</option>
+        <option value="">Preview: Live menu (Tiles)</option><option value="scroll/">Preview: Scroll</option><option value="editorial/">Preview: Editorial</option>
       </select>
       <button class="btn" id="preview-btn" type="button">Preview</button>
       <button class="btn pri" type="button" data-go="publish">Publish</button>
@@ -120,6 +120,11 @@
 </header>
 
 <main>
+  <div class="card" id="sheet-mode" hidden style="border-color:#bfe3cf;background:#f1faf5">
+    <h2>Your menu is managed in Google Sheets</h2>
+    <p style="margin:0">Edit the Google Sheet to change the live menu. Changes appear within about 5 minutes, and no publishing step is needed.
+      Use this page to check a POS export for price changes and to make the table QR code.</p>
+  </div>
   <!-- ITEMS -->
   <section class="pane on" id="p-items">
     <div class="toolbar">
@@ -216,6 +221,7 @@
 
   // ---------- state
   let data, dirty = false;
+  const SHEET = !!BH.config.sheetCsvUrl;
   const draft = (() => { try { return localStorage.getItem(BH.DRAFT_KEY); } catch (e) { return null; } })();
   async function loadLive() {
     // live data only (BH.fetchRaw would prefer the draft)
@@ -224,7 +230,7 @@
     }
     return (await fetch(BH.root + "data/menu.json", { cache: "no-store" })).json();
   }
-  if (draft) { data = JSON.parse(draft); dirty = true; } else data = await loadLive();
+  if (draft && !SHEET) { data = JSON.parse(draft); dirty = true; } else data = await loadLive();
   data.items.forEach((it) => { it.tags = it.tags || []; });
 
   let saveT;
@@ -253,7 +259,7 @@
   document.addEventListener("click", (e) => { const b = e.target.closest("[data-go]"); if (b) go(b.dataset.go); });
   $("#preview-btn").onclick = () => {
     try { localStorage.setItem(BH.DRAFT_KEY, JSON.stringify(data)); } catch (e) {}
-    window.open(BH.root + $("#preview-sel").value + "/?preview", "_blank");
+    window.open(BH.root + $("#preview-sel").value + "?preview", "_blank");
   };
 
   // ---------- items
@@ -391,7 +397,9 @@
         ${changed.map(({ it, p }) => `<tr><td>${esc(p.code)}</td><td>${esc(it.name)}${it.option ? " · " + esc(it.option) : ""}${it.visible ? "" : ' <span class="muted">(hidden)</span>'}</td><td>${BH.price(it.price)}</td><td class="${p.price > it.price ? "up" : "dn"}">${BH.price(p.price)}</td><td><span class="pill">price</span></td></tr>`).join("")}
         ${added.map((p) => `<tr><td>${esc(p.code)}</td><td>${esc(title(p.desc))} <span class="muted">${esc(p.family)}</span></td><td>—</td><td>${BH.price(p.price)}</td><td><span class="pill new">new · hidden</span></td></tr>`).join("")}
         </tbody></table></div>
-        <div class="row" style="margin-top:14px"><button class="btn pri" id="apply" type="button">Apply these changes</button><span class="muted">You can review everything in the Items tab before publishing.</span></div>`;
+        ${SHEET ? `<p class="muted" style="margin-top:14px">Update these prices in the Google Sheet (search the code with Ctrl+F / “Find”). Add new items there if they should appear on the menu.</p>`
+          : `<div class="row" style="margin-top:14px"><button class="btn pri" id="apply" type="button">Apply these changes</button><span class="muted">You can review everything in the Items tab before publishing.</span></div>`}`;
+      if (SHEET) return;
       $("#apply").onclick = () => {
         changed.forEach(({ it, p }) => (it.price = p.price));
         added.forEach((p) => data.items.push({ code: p.code, name: title(p.desc), option: "", price: p.price, category: guessCat(p.family), description: "", tags: [], visible: false }));
@@ -450,6 +458,17 @@
   $("#qr-dl").onclick = () => { const a = document.createElement("a"); a.href = $("#qr-canvas").toDataURL("image/png"); a.download = "best-home-menu-qr.png"; a.click(); };
 
   fillCatFilter(); renderItems();
+
+  // Google Sheets mode: the sheet is the source of truth, so only the read-only helpers stay
+  if (SHEET) {
+    $("#sheet-mode").hidden = false;
+    ["items", "cats", "publish"].forEach((t) => { document.querySelector(`#tabs [data-go="${t}"]`).hidden = true; });
+    document.querySelectorAll("header .row, #status").forEach((el) => el.style.display = "none");
+    document.querySelector("#p-pos p").innerHTML = "Drop the till’s Excel export here to see which prices changed since the Google Sheet was last updated. Items are matched by <b>item code</b>. Nothing is changed automatically.";
+    try { localStorage.removeItem(BH.DRAFT_KEY); } catch (e) {}
+    dirty = false;
+    go("pos");
+  }
 })();
 </script>
 </body>

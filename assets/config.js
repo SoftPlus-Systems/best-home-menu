@@ -5,16 +5,17 @@
 window.BH_CONFIG = {
   // Option A (default): leave empty → the menu is read from /data/menu.json
   //
-  // Option B: manage the menu in Google Sheets.
-  //   1. Import data/menu.csv into a Google Sheet
-  //   2. File → Share → Publish to web → "Comma-separated values (.csv)" → Publish
+  // Option B (recommended): manage the menu in Google Sheets.
+  //   1. Upload data/best-home-menu-sheet.xlsx to Google Drive → Open with Google Sheets
+  //      (File → Save as Google Sheets)
+  //   2. File → Share → Publish to web → pick the "Menu" tab + "Comma-separated values (.csv)" → Publish
   //   3. Paste the link below. Edits in the sheet appear on the site within a few minutes,
   //      no redeploy needed.
   sheetCsvUrl: "",
 
-  // true while presenting the 3 design concepts (shows a "← All concepts" pill).
-  // Set to false once the customer has picked one.
-  demo: true,
+  // true shows an "All concepts" button on every page (used while presenting the designs).
+  // The Tiles design was chosen, so it's off. The overview is still at /concepts/.
+  demo: false,
 
   currency: "USD",
   locale: "en-US",

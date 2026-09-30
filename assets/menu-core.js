@@ -13,6 +13,7 @@
   const CFG = window.BH_CONFIG || {};
   const ROOT = (document.currentScript && document.currentScript.src.replace(/assets\/menu-core\.js.*$/, "")) || "/";
   const DRAFT_KEY = "bh-menu-draft";
+  const SHEET_CACHE = "bh-menu-sheet-cache";
 
   // category name → icon, used when categories come from a spreadsheet
   const ICON_WORDS = [
@@ -53,7 +54,8 @@
 
   function fromCSV(text) {
     const rows = parseCSV(text);
-    const head = rows.shift().map((h) => h.trim().toLowerCase());
+    const head = (rows.shift() || []).map((h) => h.trim().toLowerCase().replace(/^\ufeff/, ""));
+    if (!head.includes("name") || !head.includes("price")) throw new Error("not a menu sheet (needs name + price columns)");
     const col = (r, k) => { const i = head.indexOf(k); return i < 0 ? "" : (r[i] || "").trim(); };
     const cats = [], seen = {};
     const items = rows.map((r) => {
@@ -105,10 +107,20 @@
       try { const d = localStorage.getItem(DRAFT_KEY); if (d) return JSON.parse(d); } catch (e) { /* fall through */ }
     }
     if (CFG.sheetCsvUrl) {
+      // Google Sheet → validated → remembered as "last good" in case Google is unreachable later
       try {
-        const r = await fetch(CFG.sheetCsvUrl, { cache: "no-store" });
-        if (r.ok) return fromCSV(await r.text());
-      } catch (e) { console.warn("Google Sheet unavailable, using menu.json", e); }
+        const ctl = new AbortController(), t = setTimeout(() => ctl.abort(), 8000);
+        const r = await fetch(CFG.sheetCsvUrl, { cache: "no-store", signal: ctl.signal });
+        clearTimeout(t);
+        if (!r.ok) throw new Error("HTTP " + r.status);
+        const raw = fromCSV(await r.text());
+        if (!raw.items.some((i) => i.visible && i.name)) throw new Error("sheet has no visible items");
+        try { localStorage.setItem(SHEET_CACHE, JSON.stringify(raw)); } catch (e) { /* storage full / private mode */ }
+        return raw;
+      } catch (e) {
+        console.warn("Google Sheet unavailable:", e.message);
+        try { const c = localStorage.getItem(SHEET_CACHE); if (c) return JSON.parse(c); } catch (e2) { /* ignore */ }
+      }
     }
     const r = await fetch(ROOT + "data/menu.json", { cache: "no-cache" });
     return r.json();

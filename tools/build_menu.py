@@ -336,6 +336,78 @@ FAMILY = {
 }
 
 
+def write_sheet_template(items, cat_name):
+    """data/best-home-menu-sheet.xlsx – the file to import into Google Sheets.
+    Dropdowns keep categories / visible / tags consistent; hidden rows are greyed."""
+    from openpyxl.formatting.rule import FormulaRule
+    from openpyxl.styles import Alignment, Font, PatternFill
+    from openpyxl.worksheet.datavalidation import DataValidation
+
+    order = {c[0]: i for i, c in enumerate(CATEGORIES)}
+    rows = sorted(enumerate(items), key=lambda p: (order[p[1]["category"]], not p[1]["visible"], p[0]))
+
+    wb = openpyxl.Workbook()
+    ws = wb.active
+    ws.title = "Menu"
+    head = ["code", "category", "name", "option", "price", "description", "tags", "visible"]
+    ws.append(head)
+    for _, it in rows:
+        ws.append([it["code"], cat_name[it["category"]], it["name"], it["option"], it["price"],
+                   it["description"], " ".join(it["tags"]), "yes" if it["visible"] else "no"])
+    n = ws.max_row
+    for c in ws[1]:
+        c.font = Font(bold=True, color="FFFFFF")
+        c.fill = PatternFill("solid", fgColor="253879")
+        c.alignment = Alignment(vertical="center")
+    ws.row_dimensions[1].height = 24
+    ws.freeze_panes = "A2"
+    for col, w in zip("ABCDEFGH", [8, 24, 30, 14, 9, 36, 12, 9]):
+        ws.column_dimensions[col].width = w
+    for r in range(2, n + 1):
+        ws.cell(r, 5).number_format = "0.00"
+
+    lists = wb.create_sheet("Lists")
+    for i, (_, name, _) in enumerate(CATEGORIES, 1):
+        lists.cell(i, 1, name)
+    lists.sheet_state = "hidden"
+    big = n + 500  # room for new rows
+    for rng, formula in [(f"B2:B{big}", f"=Lists!$A$1:$A${len(CATEGORIES)}"),
+                         (f"H2:H{big}", '"yes,no"'), (f"G2:G{big}", '"signature"')]:
+        dv = DataValidation(type="list", formula1=formula, allow_blank=True)
+        dv.error, dv.errorTitle = "Pick a value from the list", "Best Home menu"
+        ws.add_data_validation(dv)
+        dv.add(rng)
+    dv = DataValidation(type="decimal", operator="greaterThanOrEqual", formula1="0")
+    dv.error = "Price must be a number, e.g. 4.5"
+    ws.add_data_validation(dv)
+    dv.add(f"E2:E{big}")
+    ws.conditional_formatting.add(f"A2:H{big}", FormulaRule(formula=['$H2="no"'], font=Font(color="9AA0B4"),
+                                                             fill=PatternFill("solid", fgColor="F2F3F7")))
+
+    how = wb.create_sheet("How to edit", 1)
+    tips = [
+        "BEST HOME – how to edit the online menu",
+        "",
+        "Only the first tab (Menu) is shown on the website. Changes appear within about 5 minutes.",
+        "",
+        "Change a price: edit the price column (numbers only, e.g. 4.5).",
+        "Hide an item (sold out / seasonal): set visible to no. Set it back to yes to show it again.",
+        "Add an item: insert a row inside its category, fill category, name, price, and set visible to yes.",
+        "Sizes: rows with the same name in the same category become one dish, e.g. Whisky: Glass, 1/4 Bottle, Bottle.",
+        "  Put the size in the option column.",
+        "House signature: choose signature in the tags column.",
+        "Order: dishes and categories appear in the same order as the rows. Move rows to reorder.",
+        "code: the POS item code. Leave it as-is. Leave it empty for new items.",
+        "",
+        "Please don't rename the column headers in row 1.",
+    ]
+    for t in tips:
+        how.append([t])
+    how["A1"].font = Font(bold=True, size=14, color="253879")
+    how.column_dimensions["A"].width = 110
+    wb.save(ROOT / "data" / "best-home-menu-sheet.xlsx")
+
+
 def main():
     wb = openpyxl.load_workbook(ROOT / "data" / "pos-export.xlsx", read_only=True)
     ws = wb.active
@@ -381,6 +453,8 @@ def main():
             w.writerow([it["code"], cat_name[it["category"]], it["name"],
                         it["option"], it["price"], it["description"],
                         " ".join(it["tags"]), "yes" if it["visible"] else "no"])
+
+    write_sheet_template(items, cat_name)
 
     vis = sum(i["visible"] for i in items)
     print(f"{len(items)} POS items -> {vis} visible, {len(items) - vis} hidden")

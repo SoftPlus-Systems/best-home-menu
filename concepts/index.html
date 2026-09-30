@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Best Home · Digital Menu Concepts</title>
+<meta name="description" content="Three design concepts for the Best Home digital menu.">
+<meta name="theme-color" content="#ffffff">
+<meta name="robots" content="noindex">
+<link rel="icon" href="../assets/favicon.png">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+<link rel="preload" href="../assets/fonts/jost.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/base.css">
+<style>
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 0 16px; }
+  .hero { text-align: center; padding: 48px 0 20px; }
+  .hero img { width: 160px; margin: 0 auto 24px; }
+  .hero h1 { margin: 0 auto; max-width: 720px; font-size: clamp(30px, 6vw, 48px); line-height: 1.08; letter-spacing: -.02em; font-weight: 600; color: var(--navy-ink); }
+  .hero h1 span { color: var(--red); }
+  .hero p { margin: 16px auto 0; max-width: 600px; color: var(--ink-2); font-size: 18px; }
+  .concepts { display: grid; gap: 22px; grid-template-columns: 1fr; margin: 40px 0 0; }
+  @media (min-width: 900px) { .concepts { grid-template-columns: repeat(3, 1fr); } }
+  .concept { display: flex; flex-direction: column; border-radius: 24px; background: var(--bg-2); border: 1px solid var(--line); overflow: hidden; }
+  .stage { position: relative; height: 470px; display: grid; place-items: center; background: linear-gradient(160deg, var(--navy-50), #fff 70%); overflow: hidden; }
+  .concept:nth-child(2) .stage { background: linear-gradient(160deg, var(--red-50), #fff 70%); }
+  .concept:nth-child(3) .stage { background: linear-gradient(160deg, #f3eee4, #fff 70%); }
+  .phone { width: 250px; height: 520px; margin-top: 60px; border-radius: 34px; padding: 8px; background: #151a2c; box-shadow: 0 30px 60px -25px rgba(22,26,43,.45); }
+  .screen { width: 100%; height: 100%; border-radius: 27px; overflow: hidden; position: relative; background: #fff; }
+  .screen iframe { position: absolute; top: 0; left: 0; width: 390px; height: 790px; border: 0; transform: scale(.6); transform-origin: 0 0; pointer-events: none; }
+  .body { padding: 22px 22px 24px; display: flex; flex-direction: column; flex: 1; }
+  .num { font-size: 12px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--red); }
+  .body h2 { margin: 6px 0 8px; font-size: 26px; font-weight: 600; color: var(--navy-ink); }
+  .body p { margin: 0 0 14px; color: var(--ink-2); }
+  .body ul { margin: 0 0 20px; padding: 0; list-style: none; display: grid; gap: 7px; font-size: 15px; color: var(--ink-2); }
+  .body li { display: flex; gap: 8px; }
+  .body li::before { content: ""; flex: none; width: 6px; height: 6px; margin-top: 9px; border-radius: 50%; background: var(--navy); }
+  .body .go { margin-top: auto; display: inline-flex; align-items: center; justify-content: center; gap: 6px; height: 48px; border-radius: 14px; background: var(--navy); color: #fff; font-weight: 500; text-decoration: none; transition: background .15s; }
+  .body .go:hover { background: var(--navy-ink); }
+  .body .go .ico { width: 18px; height: 18px; }
+
+  .manage { margin: 64px 0 0; }
+  .manage > h2 { margin: 0; font-size: clamp(26px, 4.5vw, 36px); font-weight: 600; letter-spacing: -.01em; color: var(--navy-ink); text-align: center; }
+  .manage > p { margin: 10px auto 0; max-width: 640px; text-align: center; color: var(--ink-2); }
+  .ways { display: grid; gap: 16px; grid-template-columns: 1fr; margin-top: 28px; }
+  @media (min-width: 900px) { .ways { grid-template-columns: repeat(3, 1fr); } }
+  .way { padding: 22px; border-radius: 20px; border: 1px solid var(--line); background: #fff; box-shadow: var(--shadow-sm); }
+  .way .tag { display: inline-block; padding: 3px 10px; border-radius: 999px; font-size: 12px; font-weight: 600; background: var(--navy-50); color: var(--navy); }
+  .way.rec .tag { background: var(--red-50); color: var(--red); }
+  .way h3 { margin: 12px 0 6px; font-size: 20px; font-weight: 600; }
+  .way p { margin: 0 0 10px; color: var(--ink-2); font-size: 15px; }
+  .way a { color: var(--navy); font-weight: 500; }
+  .facts { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin: 56px 0 0; }
+  @media (min-width: 760px) { .facts { grid-template-columns: repeat(4, 1fr); } }
+  .fact { padding: 18px; border-radius: 18px; background: var(--bg-2); }
+  .fact b { display: block; font-size: 28px; color: var(--navy); font-weight: 600; }
+  .fact span { color: var(--ink-2); font-size: 14px; }
+  footer { text-align: center; color: var(--ink-3); font-size: 14px; padding: 48px 16px 40px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="hero">
+    <img src="../assets/logo.png" alt="Best Home" width="160" height="98">
+    <h1>A digital menu your guests will <span>enjoy using</span></h1>
+    <p>Three design directions built from the real Best Home menu. Open each one on your phone — every concept uses the same menu data, so picking one is purely a question of style.</p>
+  </header>
+
+  <div class="concepts">
+    <article class="concept">
+      <div class="stage"><div class="phone"><div class="screen"><iframe src="../scroll/" title="Scroll concept preview" loading="lazy" tabindex="-1"></iframe></div></div></div>
+      <div class="body">
+        <span class="num">Concept 01</span>
+        <h2>Scroll</h2>
+        <p>One clean page. A sticky category bar follows you down the menu and search is always at hand.</p>
+        <ul><li>Fastest to browse, zero learning curve</li><li>Live search with highlighted matches</li><li>Sizes shown side-by-side (Glass · ½ · Bottle)</li></ul>
+        <a class="go" href="../scroll/">Open Scroll <span data-i="chevron"></span></a>
+      </div>
+    </article>
+    <article class="concept">
+      <div class="stage"><div class="phone"><div class="screen"><iframe src="../" title="Tiles concept preview" loading="lazy" tabindex="-1"></iframe></div></div></div>
+      <div class="body">
+        <span class="num">Concept 02</span>
+        <h2>Tiles</h2>
+        <p>Feels like an app. Guests pick a category from a visual grid, then swipe between categories.</p>
+        <ul><li>House signatures carousel up front</li><li>Food and drinks clearly separated</li><li>Tap a dish for a detail sheet with all sizes</li></ul>
+        <a class="go" href="../">Open Tiles <span data-i="chevron"></span></a>
+      </div>
+    </article>
+    <article class="concept">
+      <div class="stage"><div class="phone"><div class="screen"><iframe src="../editorial/" title="Editorial concept preview" loading="lazy" tabindex="-1"></iframe></div></div></div>
+      <div class="body">
+        <span class="num">Concept 03</span>
+        <h2>Editorial</h2>
+        <p>A printed-menu feel with elegant typography and a warm paper tone, for a more upscale evening mood.</p>
+        <ul><li>Classic dotted price leaders</li><li>Numbered contents and quick index</li><li>Prints as a clean 2-column paper menu</li></ul>
+        <a class="go" href="../editorial/">Open Editorial <span data-i="chevron"></span></a>
+      </div>
+    </article>
+  </div>
+
+  <div class="facts">
+    <div class="fact"><b id="f-items">—</b><span>dishes & drinks online</span></div>
+    <div class="fact"><b id="f-cats">—</b><span>clear categories</span></div>
+    <div class="fact"><b>0</b><span>apps to install</span></div>
+    <div class="fact"><b>$0</b><span>hosting on Netlify’s free plan</span></div>
+  </div>
+
+  <section class="manage">
+    <h2>Keeping the menu up to date</h2>
+    <p>No database, no server, no monthly fees. Pick whichever of these suits the team; they can be combined.</p>
+    <div class="ways">
+      <div class="way rec"><span class="tag">Recommended</span>
+        <h3>Menu Manager</h3>
+        <p>A simple screen to rename dishes, change prices, hide items that are sold out and mark house signatures. Drop in the till's Excel export to update every price in one go.</p>
+        <p><a href="../manage/">Open the Menu Manager →</a></p></div>
+      <div class="way"><span class="tag">Live</span>
+        <h3>Google Sheets</h3>
+        <p>Keep the menu in a Google Sheet. Anyone with access edits it from their phone and the website picks up changes within minutes, with no publishing step.</p></div>
+      <div class="way"><span class="tag">Straight from the till</span>
+        <h3>POS export</h3>
+        <p>Item codes from the POS link each till item to its menu entry. New till items arrive hidden and staff-only items stay off the public menu.</p></div>
+    </div>
+  </section>
+</div>
+<footer>Best Home · Digital menu concepts</footer>
+
+<script src="../assets/config.js"></script>
+<script src="../assets/icons.js"></script>
+<script src="../assets/menu-core.js"></script>
+<script>
+  document.querySelectorAll("[data-i]").forEach((el) => el.innerHTML = BH.icon(el.dataset.i));
+  BH.load().then((m) => {
+    document.getElementById("f-items").textContent = m.categories.reduce((n, c) => n + c.items.length, 0);
+    document.getElementById("f-cats").textContent = m.categories.length;
+  });
+</script>
+</body>
+</html>
