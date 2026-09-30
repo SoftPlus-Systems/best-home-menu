@@ -104,8 +104,14 @@
   // Accepts either a "Publish to web" CSV link, or a normal share link
   // (Share → Anyone with the link → Viewer), which is read through Google's CSV endpoint.
   function sheetUrl(u) {
-    const m = String(u || "").match(/docs\.google\.com\/spreadsheets\/d\/([\w-]+)/);
-    if (!m || m[1] === "e") return u;
+    u = String(u || "");
+    // "Publish to web" link: /pubhtml (web page) → /pub?output=csv (first tab = Menu)
+    if (/\/spreadsheets\/d\/e\//.test(u)) {
+      if (/output=csv/.test(u)) return u;
+      return u.replace(/\/pub(html)?(\?.*|#.*)?$/, "/pub?output=csv");
+    }
+    const m = u.match(/docs\.google\.com\/spreadsheets\/d\/([\w-]+)/);
+    if (!m) return u;
     return "https://docs.google.com/spreadsheets/d/" + m[1] + "/gviz/tq?tqx=out:csv&sheet=Menu";
   }
 
