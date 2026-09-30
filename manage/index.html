@@ -226,7 +226,7 @@
   async function loadLive() {
     // live data only (BH.fetchRaw would prefer the draft)
     if (BH.config.sheetCsvUrl) {
-      try { const r = await fetch(BH.config.sheetCsvUrl, { cache: "no-store" }); if (r.ok) return BH.fromCSV(await r.text()); } catch (e) {}
+      try { const r = await fetch(BH.sheetUrl(BH.config.sheetCsvUrl), { cache: "no-store" }); if (r.ok) return BH.fromCSV(await r.text()); } catch (e) {}
     }
     return (await fetch(BH.root + "data/menu.json", { cache: "no-store" })).json();
   }

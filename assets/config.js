@@ -6,11 +6,10 @@ window.BH_CONFIG = {
   // Option A (default): leave empty → the menu is read from /data/menu.json
   //
   // Option B (recommended): manage the menu in Google Sheets.
-  //   1. Upload data/best-home-menu-sheet.xlsx to Google Drive → Open with Google Sheets
-  //      (File → Save as Google Sheets)
-  //   2. File → Share → Publish to web → pick the "Menu" tab + "Comma-separated values (.csv)" → Publish
-  //   3. Paste the link below. Edits in the sheet appear on the site within a few minutes,
-  //      no redeploy needed.
+  //   1. Upload data/best-home-menu-sheet.xlsx to Google Drive, open it, and save it as a Google Sheet.
+  //   2. Share → General access: "Anyone with the link" → Viewer → Copy link
+  //      (or, on a computer: File → Share → Publish to web → "Menu" tab → CSV)
+  //   3. Paste that link below. Sheet edits show on the site within a minute or so.
   sheetCsvUrl: "",
 
   // true shows an "All concepts" button on every page (used while presenting the designs).

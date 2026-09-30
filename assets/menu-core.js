@@ -101,6 +101,14 @@
     return { restaurant: { ...(raw.restaurant || {}), name: (raw.restaurant && raw.restaurant.name) || "Best Home" }, categories };
   }
 
+  // Accepts either a "Publish to web" CSV link, or a normal share link
+  // (Share → Anyone with the link → Viewer), which is read through Google's CSV endpoint.
+  function sheetUrl(u) {
+    const m = String(u || "").match(/docs\.google\.com\/spreadsheets\/d\/([\w-]+)/);
+    if (!m || m[1] === "e") return u;
+    return "https://docs.google.com/spreadsheets/d/" + m[1] + "/gviz/tq?tqx=out:csv&sheet=Menu";
+  }
+
   async function fetchRaw() {
     const params = new URLSearchParams(location.search);
     if (params.has("preview")) {
@@ -110,7 +118,7 @@
       // Google Sheet → validated → remembered as "last good" in case Google is unreachable later
       try {
         const ctl = new AbortController(), t = setTimeout(() => ctl.abort(), 8000);
-        const r = await fetch(CFG.sheetCsvUrl, { cache: "no-store", signal: ctl.signal });
+        const r = await fetch(sheetUrl(CFG.sheetCsvUrl), { cache: "no-store", signal: ctl.signal });
         clearTimeout(t);
         if (!r.ok) throw new Error("HTTP " + r.status);
         const raw = fromCSV(await r.text());
@@ -135,7 +143,7 @@
     root: ROOT,
     DRAFT_KEY,
     async load() { return shape(await fetchRaw()); },
-    fetchRaw, shape, fromCSV, parseCSV, slug,
+    fetchRaw, shape, fromCSV, parseCSV, slug, sheetUrl,
     price: (n) => fmt.format(n),
     esc,
     /** from-price for dishes with several sizes */

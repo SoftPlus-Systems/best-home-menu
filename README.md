@@ -26,8 +26,9 @@ Every push to the production branch (`main`) redeploys automatically.
 1. Upload **`data/best-home-menu-sheet.xlsx`** to Google Drive and open it with Google Sheets
    (**File → Save as Google Sheets**). It already has the whole menu, dropdowns for
    category / visible / signature, and a **How to edit** tab for the staff.
-2. In the sheet, go to **File → Share → Publish to web**. Choose the **Menu** tab and
-   **Comma-separated values (.csv)**, click **Publish**, and copy the link.
+2. Share the sheet: **Share → General access → Anyone with the link → Viewer → Copy link**.
+   This works from the phone app. On a computer you can use **File → Share → Publish to web**
+   (Menu tab, CSV) instead; either link works.
 3. Paste that link into **`assets/config.js`** as `sheetCsvUrl`, then commit. This is the only
    code change ever needed.
 
