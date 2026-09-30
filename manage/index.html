@@ -1,0 +1,456 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Best Home · Menu Manager</title>
+<link rel="icon" href="../assets/favicon.png">
+<link rel="stylesheet" href="../assets/base.css">
+<style>
+  body { background: var(--bg-2); font-size: 15px; }
+  header.top { position: sticky; top: 0; z-index: 30; background: #fff; border-bottom: 1px solid var(--line); }
+  .top-in { max-width: 1240px; margin: 0 auto; padding: 10px 16px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+  .top-in img { width: 36px; }
+  .top-in h1 { margin: 0; font-size: 18px; font-weight: 600; color: var(--navy-ink); }
+  .status { margin-left: auto; font-size: 13px; color: var(--ink-3); display: flex; align-items: center; gap: 8px; }
+  .dot { width: 8px; height: 8px; border-radius: 50%; background: #2fa36b; }
+  .dirty .dot { background: #e8a317; }
+  nav.tabs { max-width: 1240px; margin: 0 auto; padding: 0 16px; display: flex; gap: 4px; overflow-x: auto; scrollbar-width: none; }
+  nav.tabs button { padding: 10px 14px; border-bottom: 2.5px solid transparent; color: var(--ink-2); font-weight: 500; white-space: nowrap; }
+  nav.tabs button.on { color: var(--navy); border-color: var(--navy); }
+  main { max-width: 1240px; margin: 0 auto; padding: 18px 16px 80px; }
+  .pane { display: none; } .pane.on { display: block; }
+  .card { background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 18px; box-shadow: var(--shadow-sm); margin-bottom: 16px; }
+  .card h2 { margin: 0 0 6px; font-size: 18px; font-weight: 600; color: var(--navy-ink); }
+  .card p { margin: 0 0 12px; color: var(--ink-2); }
+  .muted { color: var(--ink-3); font-size: 13.5px; }
+  .btn { display: inline-flex; align-items: center; gap: 8px; height: 40px; padding: 0 16px; border-radius: 10px; background: #fff; border: 1px solid var(--line); font-weight: 500; color: var(--ink); text-decoration: none; white-space: nowrap; }
+  .btn:hover { border-color: var(--navy-100); background: var(--navy-50); }
+  .btn.pri { background: var(--navy); border-color: var(--navy); color: #fff; }
+  .btn.pri:hover { background: var(--navy-ink); }
+  .btn.ghost { border-color: transparent; background: none; }
+  .btn .ico { width: 18px; height: 18px; }
+  .row { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+  input.f, select.f, textarea.f { height: 38px; padding: 0 10px; border: 1px solid var(--line); border-radius: 9px; background: #fff; font: inherit; font-size: 15px; min-width: 0; width: 100%; }
+  input.f:focus, select.f:focus { outline: none; border-color: var(--navy); box-shadow: 0 0 0 3px var(--navy-50); }
+  .toolbar { position: sticky; top: var(--hdr, 101px); z-index: 20; display: flex; gap: 10px; flex-wrap: wrap; align-items: center; padding: 10px; margin: -4px -4px 14px; background: rgba(246,247,251,.94); backdrop-filter: blur(8px); border-radius: 14px; }
+  .toolbar .sq { flex: 1 1 220px; }
+  .toolbar select { width: auto; flex: 0 1 220px; }
+  .chk { display: inline-flex; align-items: center; gap: 8px; font-size: 14px; color: var(--ink-2); user-select: none; }
+
+  /* items */
+  .grp { margin-bottom: 18px; background: #fff; border: 1px solid var(--line); border-radius: 16px; overflow: hidden; box-shadow: var(--shadow-sm); }
+  .grp h3 { margin: 0; padding: 12px 16px; font-size: 15px; font-weight: 600; display: flex; align-items: center; gap: 10px; color: var(--navy-ink); background: var(--navy-50); }
+  .grp h3 .ico { width: 20px; height: 20px; }
+  .grp h3 span { margin-left: auto; font-weight: 400; color: var(--ink-3); font-size: 13px; }
+  .it { display: grid; grid-template-columns: 46px minmax(160px, 2fr) minmax(90px, 1fr) 96px minmax(130px, 1.2fr) minmax(140px, 2fr) 40px 40px; gap: 8px; align-items: center; padding: 8px 12px; border-top: 1px solid var(--line); }
+  .it.head { font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: var(--ink-3); background: #fff; padding-top: 10px; padding-bottom: 6px; }
+  .it.off > :not(.sw):not(.code-wrap) { opacity: .45; }
+  .it .code { font-size: 11px; color: var(--ink-3); }
+  .price-in { position: relative; }
+  .price-in::before { content: "$"; position: absolute; left: 9px; top: 50%; transform: translateY(-50%); color: var(--ink-3); font-size: 14px; }
+  .price-in input { padding-left: 20px; text-align: right; font-variant-numeric: tabular-nums; }
+  .sw { position: relative; width: 40px; height: 24px; border-radius: 999px; background: #cfd3df; transition: background .15s; }
+  .sw::after { content: ""; position: absolute; top: 3px; left: 3px; width: 18px; height: 18px; border-radius: 50%; background: #fff; box-shadow: 0 1px 2px rgba(0,0,0,.2); transition: transform .15s; }
+  .sw[aria-checked="true"] { background: #2fa36b; }
+  .sw[aria-checked="true"]::after { transform: translateX(16px); }
+  .star, .del { width: 36px; height: 36px; border-radius: 9px; display: grid; place-items: center; color: #b9bdca; }
+  .star[aria-pressed="true"] { color: var(--red); background: var(--red-50); }
+  .star[aria-pressed="true"] svg { fill: currentColor; }
+  .del:hover { color: var(--red); background: var(--red-50); }
+  .star .ico, .del .ico { width: 19px; height: 19px; }
+  @media (max-width: 900px) {
+    .toolbar { position: static; }
+    .it.head { display: none; }
+    .it { grid-template-columns: 46px 1fr 1fr 36px 36px; grid-auto-flow: row; }
+    .it > .nm { grid-column: 2 / 4; }
+    .it > .op { grid-column: 2 / 3; } .it > .price-in { grid-column: 3 / 4; }
+    .it > .cat { grid-column: 2 / 4; } .it > .ds { grid-column: 2 / 4; }
+    .it > .star { grid-column: 4; grid-row: 1; } .it > .del { grid-column: 5; grid-row: 1; }
+  }
+  .empty { padding: 40px; text-align: center; color: var(--ink-3); }
+
+  /* categories */
+  .crow { display: grid; grid-template-columns: 44px 1fr 150px 70px auto; gap: 10px; align-items: center; padding: 8px 0; border-top: 1px solid var(--line); }
+  .crow:first-of-type { border-top: 0; }
+  .crow .ic { width: 40px; height: 40px; border-radius: 11px; background: var(--navy-50); color: var(--navy); display: grid; place-items: center; }
+  .crow .n { color: var(--ink-3); font-size: 13px; text-align: right; }
+  @media (max-width: 640px) { .crow { grid-template-columns: 44px 1fr auto; } .crow select, .crow .n { grid-column: 2; } }
+
+  /* pos diff */
+  table.diff { width: 100%; border-collapse: collapse; font-size: 14px; }
+  table.diff th, table.diff td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--line); }
+  table.diff th { font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: var(--ink-3); font-weight: 500; }
+  .up { color: #b0341c; } .dn { color: #1f8a57; }
+  .pill { display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: 12px; font-weight: 600; background: var(--navy-50); color: var(--navy); }
+  .pill.new { background: #fff2cf; color: #7a5a00; }
+  .drop { display: grid; place-items: center; gap: 6px; padding: 28px; border: 2px dashed var(--navy-100); border-radius: 14px; text-align: center; color: var(--ink-2); cursor: pointer; background: var(--navy-50); }
+  .drop.over { border-color: var(--navy); }
+  ol.steps { margin: 8px 0 14px; padding-left: 20px; color: var(--ink-2); line-height: 1.7; }
+  code { background: var(--bg-2); padding: 1px 6px; border-radius: 6px; font-size: 13.5px; }
+  .grid2 { display: grid; gap: 16px; grid-template-columns: 1fr; }
+  @media (min-width: 900px) { .grid2 { grid-template-columns: 1fr 1fr; } }
+  #qr-canvas { width: 240px; height: 240px; border-radius: 12px; border: 1px solid var(--line); background: #fff; }
+  .toast { position: fixed; left: 50%; bottom: 24px; transform: translate(-50%, 20px); background: var(--ink); color: #fff; padding: 10px 16px; border-radius: 12px; font-size: 14px; opacity: 0; pointer-events: none; transition: .25s; z-index: 99; }
+  .toast.show { opacity: 1; transform: translate(-50%, 0); }
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="top-in">
+    <img src="../assets/logo-mark.png" alt="">
+    <h1>Menu Manager</h1>
+    <div class="status" id="status"><span class="dot"></span><span id="status-t">Loading…</span></div>
+    <div class="row">
+      <select class="f" id="preview-sel" style="width:auto" aria-label="Preview design">
+        <option value="scroll">Preview: Scroll</option><option value="tiles">Preview: Tiles</option><option value="editorial">Preview: Editorial</option>
+      </select>
+      <button class="btn" id="preview-btn" type="button">Preview</button>
+      <button class="btn pri" type="button" data-go="publish">Publish</button>
+    </div>
+  </div>
+  <nav class="tabs" id="tabs">
+    <button data-go="items" class="on">Items</button>
+    <button data-go="cats">Categories</button>
+    <button data-go="pos">Update prices from POS</button>
+    <button data-go="publish">Publish</button>
+    <button data-go="qr">QR code</button>
+  </nav>
+</header>
+
+<main>
+  <!-- ITEMS -->
+  <section class="pane on" id="p-items">
+    <div class="toolbar">
+      <input class="f sq" id="q" type="search" placeholder="Search items or POS code…">
+      <select class="f" id="fcat"><option value="">All categories</option></select>
+      <label class="chk"><input type="checkbox" id="show-hidden"> Show hidden items</label>
+      <button class="btn pri" id="add" type="button"><span data-i="plus"></span>Add item</button>
+    </div>
+    <div id="items"></div>
+  </section>
+
+  <!-- CATEGORIES -->
+  <section class="pane" id="p-cats">
+    <div class="card">
+      <h2>Categories</h2>
+      <p>Rename, re-order and pick an icon. The order here is the order on the menu.</p>
+      <div id="cats"></div>
+      <div class="row" style="margin-top:12px"><input class="f" id="new-cat" placeholder="New category name" style="max-width:280px"><button class="btn" id="add-cat" type="button">Add category</button></div>
+    </div>
+  </section>
+
+  <!-- POS -->
+  <section class="pane" id="p-pos">
+    <div class="card">
+      <h2>Update prices from your POS export</h2>
+      <p>Export the item list from the till (same format as <code>menu.xlsx</code>: Item Code, Description, Price, Family) and drop it here.
+        Prices are matched by <b>item code</b> — your nicer menu names, categories and descriptions are kept. New till items are added as <b>hidden</b> so you can decide whether to show them.</p>
+      <label class="drop" id="drop"><input type="file" id="pos-file" accept=".xlsx,.xls,.csv" hidden>
+        <b>Choose or drop the Excel / CSV file</b><span class="muted">Nothing is uploaded — the file is read in your browser.</span></label>
+      <div id="pos-out" style="margin-top:16px"></div>
+    </div>
+  </section>
+
+  <!-- PUBLISH -->
+  <section class="pane" id="p-publish">
+    <div class="grid2">
+      <div class="card">
+        <h2>Option 1 · Publish the file (recommended)</h2>
+        <p>Your edits are saved in this browser. To put them live:</p>
+        <ol class="steps">
+          <li>Click <b>Download menu.json</b>.</li>
+          <li>On GitHub, open the repository → folder <code>data</code> → <b>Add file → Upload files</b>, drop <code>menu.json</code> and click <b>Commit changes</b>.</li>
+          <li>Netlify rebuilds automatically — the live menu updates in about 30 seconds.</li>
+        </ol>
+        <div class="row"><button class="btn pri" id="dl-json" type="button">Download menu.json</button></div>
+      </div>
+      <div class="card">
+        <h2>Option 2 · Google Sheets (no publishing step)</h2>
+        <p>Prefer editing a spreadsheet? Keep the menu in Google Sheets and the website reads it live.</p>
+        <ol class="steps">
+          <li>Download the CSV below and import it into a new Google Sheet (<b>File → Import</b>).</li>
+          <li><b>File → Share → Publish to web</b>, choose <b>Comma-separated values (.csv)</b>, publish, copy the link.</li>
+          <li>Paste the link into <code>assets/config.js</code> → <code>sheetCsvUrl</code> (one-time).</li>
+        </ol>
+        <div class="row"><button class="btn" id="dl-csv" type="button">Download menu.csv</button></div>
+        <p class="muted" style="margin-top:12px">Columns: code, category, name, option, price, description, tags, visible. Rows with the same name in the same category become one dish with several sizes (e.g. Glass / Bottle). Set <i>visible</i> to “no” to hide an item.</p>
+      </div>
+    </div>
+    <div class="card">
+      <h2>Start over</h2>
+      <p>Throw away the changes saved in this browser and reload the menu that is currently live.</p>
+      <button class="btn" id="discard" type="button">Discard my changes</button>
+    </div>
+  </section>
+
+  <!-- QR -->
+  <section class="pane" id="p-qr">
+    <div class="card">
+      <h2>QR code for the tables</h2>
+      <p>Print it on table cards, the door or receipts. It points to your live menu.</p>
+      <div class="grid2">
+        <div>
+          <label class="muted" for="qr-url">Menu address</label>
+          <input class="f" id="qr-url" style="margin:6px 0 12px">
+          <div class="row"><button class="btn pri" id="qr-dl" type="button">Download PNG</button></div>
+          <p class="muted" style="margin-top:12px">Tip: once you have a custom domain (e.g. menu.besthome.com), paste it above and download the QR again.</p>
+        </div>
+        <canvas id="qr-canvas" width="960" height="960"></canvas>
+      </div>
+    </div>
+  </section>
+</main>
+<div class="toast" id="toast"></div>
+
+<script src="../assets/config.js"></script>
+<script src="../assets/icons.js"></script>
+<script src="../assets/menu-core.js"></script>
+<script src="../assets/vendor/qrcode.js"></script>
+<script>
+(async () => {
+  const $ = (s) => document.querySelector(s);
+  const { esc, icon } = BH;
+  document.querySelectorAll("[data-i]").forEach((el) => el.innerHTML = icon(el.dataset.i));
+
+  // ---------- state
+  let data, dirty = false;
+  const draft = (() => { try { return localStorage.getItem(BH.DRAFT_KEY); } catch (e) { return null; } })();
+  async function loadLive() {
+    // live data only (BH.fetchRaw would prefer the draft)
+    if (BH.config.sheetCsvUrl) {
+      try { const r = await fetch(BH.config.sheetCsvUrl, { cache: "no-store" }); if (r.ok) return BH.fromCSV(await r.text()); } catch (e) {}
+    }
+    return (await fetch(BH.root + "data/menu.json", { cache: "no-store" })).json();
+  }
+  if (draft) { data = JSON.parse(draft); dirty = true; } else data = await loadLive();
+  data.items.forEach((it) => { it.tags = it.tags || []; });
+
+  let saveT;
+  function save() {
+    dirty = true; status();
+    clearTimeout(saveT);
+    saveT = setTimeout(() => { try { localStorage.setItem(BH.DRAFT_KEY, JSON.stringify(data)); } catch (e) { toast("Could not save in this browser"); } }, 250);
+  }
+  function status() {
+    $("#status").classList.toggle("dirty", dirty);
+    $("#status-t").textContent = dirty ? "Unpublished changes (saved in this browser)" : "Up to date with the live menu";
+  }
+  const toast = (m) => { const t = $("#toast"); t.textContent = m; t.classList.add("show"); clearTimeout(t._t); t._t = setTimeout(() => t.classList.remove("show"), 2600); };
+  status();
+  const hdr = () => document.documentElement.style.setProperty("--hdr", document.querySelector("header.top").offsetHeight + "px");
+  hdr(); addEventListener("resize", hdr);
+
+  // ---------- tabs
+  function go(tab) {
+    document.querySelectorAll("#tabs button").forEach((b) => b.classList.toggle("on", b.dataset.go === tab));
+    document.querySelectorAll(".pane").forEach((p) => p.classList.toggle("on", p.id === "p-" + tab));
+    if (tab === "cats") renderCats();
+    if (tab === "qr") drawQR();
+    scrollTo(0, 0);
+  }
+  document.addEventListener("click", (e) => { const b = e.target.closest("[data-go]"); if (b) go(b.dataset.go); });
+  $("#preview-btn").onclick = () => {
+    try { localStorage.setItem(BH.DRAFT_KEY, JSON.stringify(data)); } catch (e) {}
+    window.open(BH.root + $("#preview-sel").value + "/?preview", "_blank");
+  };
+
+  // ---------- items
+  const catOpts = (sel) => data.categories.map((c) => `<option value="${esc(c.id)}"${c.id === sel ? " selected" : ""}>${esc(c.name)}</option>`).join("");
+  function fillCatFilter() { const v = $("#fcat").value; $("#fcat").innerHTML = `<option value="">All categories</option>` + catOpts(v); $("#fcat").value = v; }
+
+  function rowHTML(it, i) {
+    const sig = it.tags.includes("signature");
+    return `<div class="it${it.visible ? "" : " off"}" data-k="${i}">
+      <button class="sw" role="switch" aria-checked="${it.visible}" data-a="vis" title="Show on menu"></button>
+      <div class="nm"><input class="f" data-f="name" value="${esc(it.name)}" aria-label="Name"><div class="code">POS #${esc(it.code || "—")}</div></div>
+      <input class="f op" data-f="option" value="${esc(it.option || "")}" placeholder="Size / option" aria-label="Option">
+      <label class="price-in"><input class="f" data-f="price" type="number" step="0.01" min="0" inputmode="decimal" value="${it.price}" aria-label="Price"></label>
+      <select class="f cat" data-f="category" aria-label="Category">${catOpts(it.category)}</select>
+      <input class="f ds" data-f="description" value="${esc(it.description || "")}" placeholder="Description (optional)" aria-label="Description">
+      <button class="star" aria-pressed="${sig}" data-a="sig" title="House signature">${icon("star")}</button>
+      <button class="del" data-a="del" title="Delete item">${icon("close")}</button></div>`;
+  }
+  function renderItems() {
+    const q = $("#q").value.trim().toLowerCase(), fc = $("#fcat").value, sh = $("#show-hidden").checked;
+    const groups = data.categories.map((c) => {
+      const rows = [];
+      data.items.forEach((it, i) => {
+        if (it.category !== c.id || (fc && fc !== c.id)) return;
+        if (!sh && !it.visible && !q) return;
+        if (q && !(it.name + " " + (it.option || "") + " " + (it.code || "") + " " + (it.description || "")).toLowerCase().includes(q)) return;
+        rows.push(rowHTML(it, i));
+      });
+      if (!rows.length) return "";
+      return `<div class="grp"><h3>${icon(c.icon)}${esc(c.name)}<span>${rows.length} rows</span></h3>
+        <div class="it head"><span>Show</span><span>Name</span><span>Size</span><span>Price</span><span>Category</span><span>Description</span><span></span><span></span></div>${rows.join("")}</div>`;
+    }).join("");
+    $("#items").innerHTML = groups || `<div class="empty">No items match.</div>`;
+  }
+  let qt; $("#q").addEventListener("input", () => { clearTimeout(qt); qt = setTimeout(renderItems, 150); });
+  $("#fcat").onchange = renderItems; $("#show-hidden").onchange = renderItems;
+
+  $("#items").addEventListener("input", (e) => {
+    const f = e.target.dataset.f, row = e.target.closest("[data-k]"); if (!f || !row) return;
+    const it = data.items[+row.dataset.k];
+    it[f] = f === "price" ? Math.round((parseFloat(e.target.value) || 0) * 100) / 100 : e.target.value;
+    save();
+  });
+  $("#items").addEventListener("change", (e) => { if (e.target.dataset.f === "category") renderItems(); });
+  $("#items").addEventListener("click", (e) => {
+    const b = e.target.closest("[data-a]"), row = e.target.closest("[data-k]"); if (!b || !row) return;
+    const k = +row.dataset.k, it = data.items[k];
+    if (b.dataset.a === "vis") { it.visible = !it.visible; b.setAttribute("aria-checked", it.visible); row.classList.toggle("off", !it.visible); }
+    if (b.dataset.a === "sig") { const on = !it.tags.includes("signature"); it.tags = on ? [...it.tags, "signature"] : it.tags.filter((t) => t !== "signature"); b.setAttribute("aria-pressed", on); }
+    if (b.dataset.a === "del") { if (!confirm(`Delete “${it.name}${it.option ? " – " + it.option : ""}”?\nTip: switching it off hides it without deleting.`)) return; data.items.splice(k, 1); renderItems(); }
+    save();
+  });
+  $("#add").onclick = () => {
+    const cat = $("#fcat").value || data.categories[0].id;
+    let at = -1; data.items.forEach((it, i) => { if (it.category === cat) at = i; });
+    data.items.splice(at + 1, 0, { code: "", name: "New item", option: "", price: 0, category: cat, description: "", tags: [], visible: true });
+    save(); $("#q").value = ""; renderItems();
+    const el = document.querySelector(`[data-k="${at + 1}"] [data-f=name]`); el.scrollIntoView({ block: "center" }); el.select();
+  };
+
+  // ---------- categories
+  function renderCats() {
+    const iconOpts = (sel) => BH_ICON_NAMES.slice(0, BH_ICON_NAMES.indexOf("search")).map((n) => `<option${n === sel ? " selected" : ""}>${n}</option>`).join("");
+    $("#cats").innerHTML = data.categories.map((c, i) => {
+      const n = data.items.filter((it) => it.category === c.id).length;
+      return `<div class="crow" data-c="${i}"><span class="ic">${icon(c.icon)}</span>
+        <input class="f" data-cf="name" value="${esc(c.name)}" aria-label="Category name">
+        <select class="f" data-cf="icon" aria-label="Icon">${iconOpts(c.icon)}</select>
+        <span class="n">${n} rows</span>
+        <span class="row" style="gap:4px;flex-wrap:nowrap">
+          <button class="btn ghost" data-ca="up" title="Move up" ${i ? "" : "disabled"}>${icon("up")}</button>
+          <button class="btn ghost" data-ca="down" title="Move down" style="transform:rotate(180deg)" ${i < data.categories.length - 1 ? "" : "disabled"}>${icon("up")}</button>
+          <button class="btn ghost" data-ca="del" title="${n ? "Move its items first" : "Delete"}" ${n ? "disabled" : ""}>${icon("close")}</button></span></div>`;
+    }).join("");
+  }
+  $("#cats").addEventListener("input", (e) => {
+    const f = e.target.dataset.cf, r = e.target.closest("[data-c]"); if (!f) return;
+    data.categories[+r.dataset.c][f] = e.target.value; save();
+    if (f === "icon") r.querySelector(".ic").innerHTML = icon(e.target.value);
+    fillCatFilter();
+  });
+  $("#cats").addEventListener("click", (e) => {
+    const b = e.target.closest("[data-ca]"); if (!b) return;
+    const i = +b.closest("[data-c]").dataset.c, C = data.categories;
+    if (b.dataset.ca === "up") [C[i - 1], C[i]] = [C[i], C[i - 1]];
+    if (b.dataset.ca === "down") [C[i + 1], C[i]] = [C[i], C[i + 1]];
+    if (b.dataset.ca === "del") C.splice(i, 1);
+    save(); renderCats(); fillCatFilter(); renderItems();
+  });
+  $("#add-cat").onclick = () => {
+    const name = $("#new-cat").value.trim(); if (!name) return;
+    let id = BH.slug(name) || "cat"; while (data.categories.some((c) => c.id === id)) id += "-2";
+    data.categories.push({ id, name, icon: "plus" }); $("#new-cat").value = "";
+    save(); renderCats(); fillCatFilter(); renderItems();
+  };
+
+  // ---------- POS import
+  let loadingXLSX;
+  const needXLSX = () => loadingXLSX || (loadingXLSX = new Promise((ok, no) => {
+    const s = document.createElement("script"); s.src = BH.root + "assets/vendor/xlsx.mini.min.js"; s.onload = ok; s.onerror = no; document.head.appendChild(s);
+  }));
+  async function readPOS(file) {
+    let rows;
+    if (/\.csv$/i.test(file.name)) rows = BH.parseCSV(await file.text());
+    else { await needXLSX(); const wb = XLSX.read(await file.arrayBuffer()); rows = XLSX.utils.sheet_to_json(wb.Sheets[wb.SheetNames[0]], { header: 1, raw: true }); }
+    const head = rows.shift().map((h) => String(h || "").toLowerCase());
+    const find = (...w) => { for (const x of w) { const i = head.findIndex((h) => h.includes(x)); if (i >= 0) return i; } return -1; };
+    const ci = find("code"), di = find("desc", "name"), pi = find("price"), fi = find("family name", "family", "group");
+    if (ci < 0 || pi < 0) throw new Error("Could not find the “Item Code” and “Price” columns.");
+    return rows.filter((r) => r && r[ci] != null && r[ci] !== "").map((r) => ({
+      code: String(r[ci]).trim(), desc: String(r[di] ?? "").trim(), price: Math.round((parseFloat(String(r[pi]).replace(/[^0-9.]/g, "")) || 0) * 100) / 100,
+      family: fi >= 0 ? String(r[fi] ?? "").trim() : "",
+    }));
+  }
+  const title = (s) => s.toLowerCase().replace(/(^|[\s(+\-/])([a-z])/g, (m, a, b) => a + b.toUpperCase());
+  function guessCat(family) {
+    const f = family.toLowerCase().split(/\s+/)[0] || "";
+    const hit = f && data.categories.find((c) => c.name.toLowerCase().includes(f.replace(/s$/, "")));
+    return (hit || data.categories[data.categories.length - 1]).id;
+  }
+  async function onPOS(file) {
+    const out = $("#pos-out");
+    try {
+      const pos = await readPOS(file);
+      const byCode = {}; data.items.forEach((it) => it.code && (byCode[it.code] = it));
+      const changed = [], added = [];
+      pos.forEach((p) => {
+        const it = byCode[p.code];
+        if (it) { if (Math.abs(it.price - p.price) > 0.001) changed.push({ it, p }); }
+        else added.push(p);
+      });
+      if (!changed.length && !added.length) { out.innerHTML = `<p>✅ Everything already matches — ${pos.length} POS items checked, no price changes.</p>`; return; }
+      out.innerHTML = `<p><b>${changed.length}</b> price change${changed.length === 1 ? "" : "s"} and <b>${added.length}</b> new till item${added.length === 1 ? "" : "s"} found in ${esc(file.name)}.</p>
+        <div style="overflow-x:auto"><table class="diff"><thead><tr><th>Code</th><th>Menu item</th><th>Old</th><th>New</th><th></th></tr></thead><tbody>
+        ${changed.map(({ it, p }) => `<tr><td>${esc(p.code)}</td><td>${esc(it.name)}${it.option ? " · " + esc(it.option) : ""}${it.visible ? "" : ' <span class="muted">(hidden)</span>'}</td><td>${BH.price(it.price)}</td><td class="${p.price > it.price ? "up" : "dn"}">${BH.price(p.price)}</td><td><span class="pill">price</span></td></tr>`).join("")}
+        ${added.map((p) => `<tr><td>${esc(p.code)}</td><td>${esc(title(p.desc))} <span class="muted">${esc(p.family)}</span></td><td>—</td><td>${BH.price(p.price)}</td><td><span class="pill new">new · hidden</span></td></tr>`).join("")}
+        </tbody></table></div>
+        <div class="row" style="margin-top:14px"><button class="btn pri" id="apply" type="button">Apply these changes</button><span class="muted">You can review everything in the Items tab before publishing.</span></div>`;
+      $("#apply").onclick = () => {
+        changed.forEach(({ it, p }) => (it.price = p.price));
+        added.forEach((p) => data.items.push({ code: p.code, name: title(p.desc), option: "", price: p.price, category: guessCat(p.family), description: "", tags: [], visible: false }));
+        save(); renderItems();
+        out.innerHTML = `<p>✅ Applied ${changed.length} price change(s) and added ${added.length} new item(s) as hidden. Don’t forget to <a href="#" data-go="publish">publish</a>.</p>`;
+        toast("Prices updated");
+      };
+    } catch (err) { out.innerHTML = `<p style="color:var(--red)">Could not read that file: ${esc(err.message)}</p>`; }
+  }
+  $("#pos-file").onchange = (e) => e.target.files[0] && onPOS(e.target.files[0]);
+  const drop = $("#drop");
+  ["dragenter", "dragover"].forEach((t) => drop.addEventListener(t, (e) => { e.preventDefault(); drop.classList.add("over"); }));
+  ["dragleave", "drop"].forEach((t) => drop.addEventListener(t, (e) => { e.preventDefault(); drop.classList.remove("over"); }));
+  drop.addEventListener("drop", (e) => e.dataTransfer.files[0] && onPOS(e.dataTransfer.files[0]));
+
+  // ---------- publish
+  const download = (name, text, type) => {
+    const a = document.createElement("a"); a.href = URL.createObjectURL(new Blob([text], { type })); a.download = name; a.click();
+    setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+  };
+  $("#dl-json").onclick = () => { download("menu.json", JSON.stringify(data, null, 1) + "\n", "application/json"); toast("menu.json downloaded — upload it to the data folder on GitHub"); };
+  $("#dl-csv").onclick = () => {
+    const name = Object.fromEntries(data.categories.map((c) => [c.id, c.name]));
+    const q = (v) => /[",\n]/.test(String(v)) ? '"' + String(v).replace(/"/g, '""') + '"' : String(v);
+    // category order follows the Categories tab
+    const order = Object.fromEntries(data.categories.map((c, i) => [c.id, i]));
+    const rows = [...data.items].sort((a, b) => (order[a.category] ?? 99) - (order[b.category] ?? 99));
+    const csv = [["code", "category", "name", "option", "price", "description", "tags", "visible"].join(",")]
+      .concat(rows.map((it) => [it.code, name[it.category] || it.category, it.name, it.option || "", it.price, it.description || "", (it.tags || []).join(" "), it.visible ? "yes" : "no"].map(q).join(",")));
+    download("menu.csv", "﻿" + csv.join("\n") + "\n", "text/csv");
+  };
+  $("#discard").onclick = async () => {
+    if (!confirm("Discard all unpublished changes?")) return;
+    try { localStorage.removeItem(BH.DRAFT_KEY); } catch (e) {}
+    data = await loadLive(); data.items.forEach((it) => { it.tags = it.tags || []; });
+    dirty = false; status(); fillCatFilter(); renderItems(); toast("Reloaded the live menu");
+  };
+  addEventListener("beforeunload", () => { try { dirty && localStorage.setItem(BH.DRAFT_KEY, JSON.stringify(data)); } catch (e) {} });
+
+  // ---------- QR
+  const logo = new Image(); logo.src = BH.root + "assets/logo-mark.png"; logo.onload = () => drawQR();
+  $("#qr-url").value = location.origin + "/";
+  function drawQR() {
+    const url = $("#qr-url").value.trim(); if (!url) return;
+    const qr = qrcode(0, "H"); qr.addData(url); qr.make();
+    const n = qr.getModuleCount(), cv = $("#qr-canvas"), ctx = cv.getContext("2d"), S = cv.width, m = 4, cell = S / (n + m * 2);
+    ctx.fillStyle = "#fff"; ctx.fillRect(0, 0, S, S); ctx.fillStyle = "#253879";
+    for (let r = 0; r < n; r++) for (let c = 0; c < n; c++) if (qr.isDark(r, c)) ctx.fillRect(Math.floor((c + m) * cell), Math.floor((r + m) * cell), Math.ceil(cell), Math.ceil(cell));
+    if (logo.complete && logo.naturalWidth) {
+      const L = S * 0.2, x = (S - L) / 2;
+      ctx.fillStyle = "#fff"; ctx.fillRect(x - cell, x - cell, L + 2 * cell, L + 2 * cell);
+      ctx.drawImage(logo, x, x, L, L);
+    }
+  }
+  $("#qr-url").addEventListener("input", drawQR);
+  $("#qr-dl").onclick = () => { const a = document.createElement("a"); a.href = $("#qr-canvas").toDataURL("image/png"); a.download = "best-home-menu-qr.png"; a.click(); };
+
+  fillCatFilter(); renderItems();
+})();
+</script>
+</body>
+</html>

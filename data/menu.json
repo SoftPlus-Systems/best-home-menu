@@ -1,0 +1,3217 @@
+{
+ "restaurant": {
+  "name": "Best Home",
+  "tagline": "Food · Coffee · Drinks",
+  "currency": "USD",
+  "note": "Prices in USD."
+ },
+ "categories": [
+  {
+   "id": "starters",
+   "name": "Starters",
+   "icon": "starters"
+  },
+  {
+   "id": "salads",
+   "name": "Salads",
+   "icon": "salad"
+  },
+  {
+   "id": "pizza",
+   "name": "Pizza & Manakish",
+   "icon": "pizza"
+  },
+  {
+   "id": "sandwiches",
+   "name": "Sandwiches & Burgers",
+   "icon": "burger"
+  },
+  {
+   "id": "subs",
+   "name": "Submarines",
+   "icon": "sub"
+  },
+  {
+   "id": "combos",
+   "name": "Combo Meals",
+   "icon": "combo"
+  },
+  {
+   "id": "platters",
+   "name": "Platters",
+   "icon": "platter"
+  },
+  {
+   "id": "pasta",
+   "name": "Pasta",
+   "icon": "pasta"
+  },
+  {
+   "id": "desserts",
+   "name": "Desserts",
+   "icon": "dessert"
+  },
+  {
+   "id": "hot",
+   "name": "Hot Drinks",
+   "icon": "coffee"
+  },
+  {
+   "id": "iced",
+   "name": "Iced Coffee & Matcha",
+   "icon": "iced"
+  },
+  {
+   "id": "mocktails",
+   "name": "Mocktails",
+   "icon": "mocktail"
+  },
+  {
+   "id": "juices",
+   "name": "Fresh Juices & Shakes",
+   "icon": "juice"
+  },
+  {
+   "id": "soft",
+   "name": "Soft Drinks & Water",
+   "icon": "soda"
+  },
+  {
+   "id": "beer",
+   "name": "Beer",
+   "icon": "beer"
+  },
+  {
+   "id": "wine",
+   "name": "Wine",
+   "icon": "wine"
+  },
+  {
+   "id": "spirits",
+   "name": "Spirits",
+   "icon": "spirits"
+  },
+  {
+   "id": "arguileh",
+   "name": "Arguileh",
+   "icon": "arguileh"
+  },
+  {
+   "id": "extras",
+   "name": "Extras & Add-ons",
+   "icon": "plus"
+  }
+ ],
+ "items": [
+  {
+   "code": "11",
+   "name": "Garlic Bread",
+   "option": "",
+   "price": 4.0,
+   "category": "starters",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "12",
+   "name": "Spring Rolls",
+   "option": "",
+   "price": 1.28,
+   "category": "starters",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "13",
+   "name": "French Fries",
+   "option": "Small",
+   "price": 2.78,
+   "category": "starters",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "14",
+   "name": "French Fries",
+   "option": "Plate",
+   "price": 3.78,
+   "category": "starters",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "347",
+   "name": "Potato Wedges",
+   "option": "",
+   "price": 4.5,
+   "category": "starters",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "395",
+   "name": "Potato Wedges with Cheddar",
+   "option": "",
+   "price": 6.0,
+   "category": "starters",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "322",
+   "name": "Spicy Potatoes",
+   "option": "",
+   "price": 4.0,
+   "category": "starters",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "15",
+   "name": "Baked Potato",
+   "option": "",
+   "price": 3.5,
+   "category": "starters",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "16",
+   "name": "Cheese Rolls",
+   "option": "",
+   "price": 0.89,
+   "category": "starters",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "20",
+   "name": "Sambousek",
+   "option": "",
+   "price": 1.17,
+   "category": "starters",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "180",
+   "name": "Spinach Pie",
+   "option": "",
+   "price": 1.11,
+   "category": "starters",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "181",
+   "name": "Pumpkin Kibbeh",
+   "option": "",
+   "price": 1.11,
+   "category": "starters",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "17",
+   "name": "Hommos",
+   "option": "",
+   "price": 2.5,
+   "category": "starters",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "173",
+   "name": "Hommos with Awarma",
+   "option": "",
+   "price": 5.5,
+   "category": "starters",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "113",
+   "name": "Moutabal",
+   "option": "",
+   "price": 2.5,
+   "category": "starters",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "183",
+   "name": "Mhammara",
+   "option": "",
+   "price": 3.61,
+   "category": "starters",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "182",
+   "name": "Eggplant Msakaa",
+   "option": "",
+   "price": 2.5,
+   "category": "starters",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "132",
+   "name": "Grape Leaves",
+   "option": "",
+   "price": 3.5,
+   "category": "starters",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "18",
+   "name": "Foul Moudammas",
+   "option": "",
+   "price": 4.0,
+   "category": "starters",
+   "description": "Served with fresh vegetables",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "385",
+   "name": "Labneh",
+   "option": "",
+   "price": 3.0,
+   "category": "starters",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "386",
+   "name": "Cheese Plate",
+   "option": "",
+   "price": 4.0,
+   "category": "starters",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "384",
+   "name": "Eggs",
+   "option": "3 eggs",
+   "price": 4.78,
+   "category": "starters",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "19",
+   "name": "Halabieh",
+   "option": "",
+   "price": 1.5,
+   "category": "starters",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "342",
+   "name": "Chicken Nuggets",
+   "option": "4 pcs",
+   "price": 4.0,
+   "category": "starters",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "341",
+   "name": "Chicken Crispy",
+   "option": "4 pcs",
+   "price": 6.0,
+   "category": "starters",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "348",
+   "name": "Mozzarella Sticks",
+   "option": "5 pcs",
+   "price": 4.5,
+   "category": "starters",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "369",
+   "name": "Grilled Halloumi",
+   "option": "4 pcs",
+   "price": 6.0,
+   "category": "starters",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "179",
+   "name": "Calamari",
+   "option": "4 pcs",
+   "price": 5.0,
+   "category": "starters",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "125",
+   "name": "Termos",
+   "option": "",
+   "price": 1.0,
+   "category": "starters",
+   "description": "Lupini beans",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "126",
+   "name": "Carrot Sticks",
+   "option": "",
+   "price": 1.0,
+   "category": "starters",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "23",
+   "name": "Mixed Nuts",
+   "option": "Regular",
+   "price": 2.22,
+   "category": "starters",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "24",
+   "name": "Mixed Nuts",
+   "option": "Large",
+   "price": 4.0,
+   "category": "starters",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "1",
+   "name": "Caesar Salad",
+   "option": "",
+   "price": 8.0,
+   "category": "salads",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "2",
+   "name": "Fattoush",
+   "option": "Large",
+   "price": 6.0,
+   "category": "salads",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "153",
+   "name": "Fattoush",
+   "option": "Small",
+   "price": 4.44,
+   "category": "salads",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "161",
+   "name": "Tabbouleh",
+   "option": "Large",
+   "price": 6.67,
+   "category": "salads",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "340",
+   "name": "Tabbouleh",
+   "option": "Small",
+   "price": 5.0,
+   "category": "salads",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "3",
+   "name": "Greek Salad",
+   "option": "",
+   "price": 6.0,
+   "category": "salads",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "154",
+   "name": "Oriental Salad",
+   "option": "",
+   "price": 5.0,
+   "category": "salads",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "5",
+   "name": "Chef Salad",
+   "option": "",
+   "price": 6.5,
+   "category": "salads",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "7",
+   "name": "Panaché Salad",
+   "option": "",
+   "price": 9.0,
+   "category": "salads",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "4",
+   "name": "Tuna Salad",
+   "option": "",
+   "price": 8.0,
+   "category": "salads",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "390",
+   "name": "Crab Salad",
+   "option": "",
+   "price": 7.5,
+   "category": "salads",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "337",
+   "name": "Quinoa Salad",
+   "option": "",
+   "price": 7.0,
+   "category": "salads",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "331",
+   "name": "Kale Salad",
+   "option": "",
+   "price": 6.0,
+   "category": "salads",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "377",
+   "name": "Chicken Kale Salad",
+   "option": "",
+   "price": 8.0,
+   "category": "salads",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "339",
+   "name": "Rocca Salad",
+   "option": "",
+   "price": 4.0,
+   "category": "salads",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "351",
+   "name": "Rocca & Halloumi",
+   "option": "",
+   "price": 6.0,
+   "category": "salads",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "9",
+   "name": "Russian Salad",
+   "option": "",
+   "price": 4.0,
+   "category": "salads",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "10",
+   "name": "Coleslaw",
+   "option": "",
+   "price": 4.5,
+   "category": "salads",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "372",
+   "name": "Vegetable Plate",
+   "option": "",
+   "price": 2.0,
+   "category": "salads",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "30",
+   "name": "Best Pizza",
+   "option": "",
+   "price": 9.0,
+   "category": "pizza",
+   "description": "Our house pizza",
+   "tags": [
+    "signature"
+   ],
+   "visible": true
+  },
+  {
+   "code": "155",
+   "name": "Margherita Pizza",
+   "option": "",
+   "price": 7.0,
+   "category": "pizza",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "26",
+   "name": "Classic Pizza",
+   "option": "",
+   "price": 8.0,
+   "category": "pizza",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "25",
+   "name": "Vegetarian Pizza",
+   "option": "",
+   "price": 7.5,
+   "category": "pizza",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "28",
+   "name": "Pepperoni Pizza",
+   "option": "",
+   "price": 9.0,
+   "category": "pizza",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "156",
+   "name": "Chicken Pizza",
+   "option": "",
+   "price": 9.0,
+   "category": "pizza",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "338",
+   "name": "Mexican Chicken Pizza",
+   "option": "",
+   "price": 9.0,
+   "category": "pizza",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "29",
+   "name": "Tuna Pizza",
+   "option": "",
+   "price": 8.0,
+   "category": "pizza",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "349",
+   "name": "Pesto Pizza",
+   "option": "",
+   "price": 8.0,
+   "category": "pizza",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "350",
+   "name": "Fig & Feta Pizza",
+   "option": "",
+   "price": 8.5,
+   "category": "pizza",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "330",
+   "name": "Hot Dog Pizza",
+   "option": "",
+   "price": 8.0,
+   "category": "pizza",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "21",
+   "name": "Manakish Zaatar",
+   "option": "",
+   "price": 1.5,
+   "category": "pizza",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "22",
+   "name": "Manakish Cheese",
+   "option": "",
+   "price": 3.33,
+   "category": "pizza",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "370",
+   "name": "Manakish Labneh & Zaatar",
+   "option": "",
+   "price": 3.5,
+   "category": "pizza",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "329",
+   "name": "Mhammara & Cheese",
+   "option": "",
+   "price": 5.0,
+   "category": "pizza",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "36",
+   "name": "Hamburger",
+   "option": "",
+   "price": 6.0,
+   "category": "sandwiches",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "38",
+   "name": "Cheeseburger",
+   "option": "",
+   "price": 6.5,
+   "category": "sandwiches",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "39",
+   "name": "Chicken Burger",
+   "option": "",
+   "price": 5.5,
+   "category": "sandwiches",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "376",
+   "name": "Chicken Breast Burger",
+   "option": "",
+   "price": 6.5,
+   "category": "sandwiches",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "393",
+   "name": "Zinger Burger",
+   "option": "",
+   "price": 7.0,
+   "category": "sandwiches",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "334",
+   "name": "Mexican Chicken Burger",
+   "option": "",
+   "price": 6.5,
+   "category": "sandwiches",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "335",
+   "name": "Mexican Beef Burger",
+   "option": "",
+   "price": 7.0,
+   "category": "sandwiches",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "37",
+   "name": "Fish Burger",
+   "option": "",
+   "price": 5.5,
+   "category": "sandwiches",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "32",
+   "name": "Tawouk Sandwich",
+   "option": "",
+   "price": 5.0,
+   "category": "sandwiches",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "33",
+   "name": "Kafta Sandwich",
+   "option": "",
+   "price": 7.0,
+   "category": "sandwiches",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "34",
+   "name": "Fajita Sandwich",
+   "option": "",
+   "price": 7.0,
+   "category": "sandwiches",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "392",
+   "name": "Philadelphia Sandwich",
+   "option": "",
+   "price": 8.0,
+   "category": "sandwiches",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "387",
+   "name": "Meat Sandwich",
+   "option": "",
+   "price": 8.0,
+   "category": "sandwiches",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "31",
+   "name": "Hot Dog Sandwich",
+   "option": "",
+   "price": 4.0,
+   "category": "sandwiches",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "35",
+   "name": "Potato Sandwich",
+   "option": "",
+   "price": 2.78,
+   "category": "sandwiches",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "42",
+   "name": "Best Sub",
+   "option": "",
+   "price": 8.0,
+   "category": "subs",
+   "description": "Our house submarine",
+   "tags": [
+    "signature"
+   ],
+   "visible": true
+  },
+  {
+   "code": "40",
+   "name": "Chicken Sub",
+   "option": "",
+   "price": 7.0,
+   "category": "subs",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "41",
+   "name": "Tuna Sub",
+   "option": "",
+   "price": 7.0,
+   "category": "subs",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "411",
+   "name": "Burger Combo",
+   "option": "",
+   "price": 6.5,
+   "category": "combos",
+   "description": "Hamburger, fries & Pepsi",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "413",
+   "name": "Chicken Burger Combo",
+   "option": "",
+   "price": 6.0,
+   "category": "combos",
+   "description": "Chicken burger, fries & Pepsi",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "414",
+   "name": "Tawouk Combo",
+   "option": "",
+   "price": 7.5,
+   "category": "combos",
+   "description": "Tawouk sandwich, fries & a drink",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "314",
+   "name": "Chicken Sandwich Meal",
+   "option": "",
+   "price": 7.0,
+   "category": "combos",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "415",
+   "name": "Nuggets Combo",
+   "option": "",
+   "price": 7.0,
+   "category": "combos",
+   "description": "Chicken nuggets, fries & Pepsi",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "410",
+   "name": "Pizza Combo",
+   "option": "",
+   "price": 7.0,
+   "category": "combos",
+   "description": "Pizza & Pepsi",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "53",
+   "name": "Mixed Grill",
+   "option": "",
+   "price": 13.0,
+   "category": "platters",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "323",
+   "name": "Grilled Meat",
+   "option": "",
+   "price": 15.0,
+   "category": "platters",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "54",
+   "name": "Grilled Steak",
+   "option": "",
+   "price": 16.0,
+   "category": "platters",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "55",
+   "name": "Steak au Poivre",
+   "option": "",
+   "price": 17.0,
+   "category": "platters",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "56",
+   "name": "Filet Mignon",
+   "option": "",
+   "price": 17.0,
+   "category": "platters",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "51",
+   "name": "Mexican Steak",
+   "option": "",
+   "price": 17.0,
+   "category": "platters",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "43",
+   "name": "Beef Escalope",
+   "option": "",
+   "price": 13.0,
+   "category": "platters",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "45",
+   "name": "Beef Cordon Bleu",
+   "option": "",
+   "price": 16.0,
+   "category": "platters",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "44",
+   "name": "Chicken Escalope",
+   "option": "",
+   "price": 10.0,
+   "category": "platters",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "320",
+   "name": "Chicken Cordon Bleu",
+   "option": "",
+   "price": 12.0,
+   "category": "platters",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "49",
+   "name": "Chicken Kiev",
+   "option": "",
+   "price": 10.0,
+   "category": "platters",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "50",
+   "name": "Chicken Filet",
+   "option": "",
+   "price": 9.5,
+   "category": "platters",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "378",
+   "name": "Mexican Chicken Filet",
+   "option": "",
+   "price": 10.5,
+   "category": "platters",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "327",
+   "name": "Chicken Mustard",
+   "option": "",
+   "price": 10.0,
+   "category": "platters",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "328",
+   "name": "Chicken Cream Sauce",
+   "option": "",
+   "price": 10.5,
+   "category": "platters",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "48",
+   "name": "Tawouk Plate",
+   "option": "",
+   "price": 9.0,
+   "category": "platters",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "58",
+   "name": "Fajita Plate",
+   "option": "",
+   "price": 11.0,
+   "category": "platters",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "172",
+   "name": "Crispy Plate",
+   "option": "",
+   "price": 10.0,
+   "category": "platters",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "394",
+   "name": "Zinger Plate",
+   "option": "",
+   "price": 7.5,
+   "category": "platters",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "418",
+   "name": "Philadelphia Plate",
+   "option": "",
+   "price": 13.0,
+   "category": "platters",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "57",
+   "name": "Chicken Nuggets Plate",
+   "option": "",
+   "price": 8.0,
+   "category": "platters",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "46",
+   "name": "Hamburger Plate",
+   "option": "",
+   "price": 9.0,
+   "category": "platters",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "127",
+   "name": "Cheeseburger Plate",
+   "option": "",
+   "price": 10.0,
+   "category": "platters",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "128",
+   "name": "Chicken Burger Plate",
+   "option": "",
+   "price": 8.5,
+   "category": "platters",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "47",
+   "name": "Fish Burger Plate",
+   "option": "",
+   "price": 9.0,
+   "category": "platters",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "52",
+   "name": "Fish Filet",
+   "option": "",
+   "price": 11.0,
+   "category": "platters",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "379",
+   "name": "Calamari Plate",
+   "option": "",
+   "price": 10.0,
+   "category": "platters",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "343",
+   "name": "Penne Arrabbiata",
+   "option": "",
+   "price": 6.5,
+   "category": "pasta",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "178",
+   "name": "Pasta Alfredo",
+   "option": "",
+   "price": 7.0,
+   "category": "pasta",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "157",
+   "name": "Chicken Alfredo",
+   "option": "",
+   "price": 10.0,
+   "category": "pasta",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "177",
+   "name": "Pesto Pasta",
+   "option": "",
+   "price": 7.0,
+   "category": "pasta",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "345",
+   "name": "Creamy Pesto Pasta",
+   "option": "",
+   "price": 8.0,
+   "category": "pasta",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "408",
+   "name": "Chicken Pesto Pasta",
+   "option": "",
+   "price": 10.0,
+   "category": "pasta",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "426",
+   "name": "Tiramisu",
+   "option": "",
+   "price": 5.0,
+   "category": "desserts",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "420",
+   "name": "Cheesecake",
+   "option": "",
+   "price": 5.0,
+   "category": "desserts",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "174",
+   "name": "Chocolate Fondant",
+   "option": "",
+   "price": 6.0,
+   "category": "desserts",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "422",
+   "name": "Brownie",
+   "option": "",
+   "price": 3.5,
+   "category": "desserts",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "104",
+   "name": "Cake",
+   "option": "",
+   "price": 4.0,
+   "category": "desserts",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "421",
+   "name": "Waffle",
+   "option": "",
+   "price": 5.0,
+   "category": "desserts",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "423",
+   "name": "Pancakes",
+   "option": "",
+   "price": 5.0,
+   "category": "desserts",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "417",
+   "name": "Pain Perdu",
+   "option": "",
+   "price": 6.0,
+   "category": "desserts",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "169",
+   "name": "Chocolate Crêpe",
+   "option": "",
+   "price": 4.5,
+   "category": "desserts",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "309",
+   "name": "Special Crêpe",
+   "option": "",
+   "price": 5.78,
+   "category": "desserts",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "381",
+   "name": "Chocolate Banana Roll",
+   "option": "",
+   "price": 5.78,
+   "category": "desserts",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "162",
+   "name": "Chocolate Mousse",
+   "option": "",
+   "price": 5.5,
+   "category": "desserts",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "160",
+   "name": "Banana Split",
+   "option": "",
+   "price": 6.0,
+   "category": "desserts",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "356",
+   "name": "Affogato",
+   "option": "",
+   "price": 2.78,
+   "category": "desserts",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "105",
+   "name": "Ice Cream",
+   "option": "Per scoop",
+   "price": 1.5,
+   "category": "desserts",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "326",
+   "name": "Layali Lebnan",
+   "option": "",
+   "price": 1.5,
+   "category": "desserts",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "108",
+   "name": "Mhalabieh",
+   "option": "",
+   "price": 1.5,
+   "category": "desserts",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "110",
+   "name": "Meghli",
+   "option": "",
+   "price": 1.5,
+   "category": "desserts",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "109",
+   "name": "Custard",
+   "option": "",
+   "price": 1.5,
+   "category": "desserts",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "103",
+   "name": "Jello",
+   "option": "",
+   "price": 1.5,
+   "category": "desserts",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "107",
+   "name": "Fruit Salad",
+   "option": "",
+   "price": 5.0,
+   "category": "desserts",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "130",
+   "name": "Mixed Fruit",
+   "option": "",
+   "price": 2.5,
+   "category": "desserts",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "310",
+   "name": "Espresso",
+   "option": "Single",
+   "price": 1.5,
+   "category": "hot",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "457",
+   "name": "Espresso",
+   "option": "Double",
+   "price": 2.5,
+   "category": "hot",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "450",
+   "name": "Americano",
+   "option": "",
+   "price": 3.0,
+   "category": "hot",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "456",
+   "name": "Lebanese Coffee",
+   "option": "",
+   "price": 1.5,
+   "category": "hot",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "99",
+   "name": "Nescafé",
+   "option": "",
+   "price": 2.5,
+   "category": "hot",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "100",
+   "name": "Cappuccino",
+   "option": "",
+   "price": 2.5,
+   "category": "hot",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "434",
+   "name": "Flat White",
+   "option": "",
+   "price": 3.0,
+   "category": "hot",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "451",
+   "name": "Latte",
+   "option": "",
+   "price": 3.5,
+   "category": "hot",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "453",
+   "name": "Spanish Latte",
+   "option": "",
+   "price": 4.0,
+   "category": "hot",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "454",
+   "name": "Coconut Latte",
+   "option": "",
+   "price": 4.0,
+   "category": "hot",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "455",
+   "name": "Banana Latte",
+   "option": "",
+   "price": 5.0,
+   "category": "hot",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "452",
+   "name": "Mocha Latte",
+   "option": "",
+   "price": 5.0,
+   "category": "hot",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "467",
+   "name": "Sweet Matcha",
+   "option": "",
+   "price": 5.0,
+   "category": "hot",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "101",
+   "name": "Hot Chocolate",
+   "option": "",
+   "price": 3.5,
+   "category": "hot",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "484",
+   "name": "Tea",
+   "option": "",
+   "price": 1.5,
+   "category": "hot",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "97",
+   "name": "Zhourat",
+   "option": "",
+   "price": 1.0,
+   "category": "hot",
+   "description": "Lebanese herbal infusion",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "458",
+   "name": "Iced Americano",
+   "option": "",
+   "price": 3.0,
+   "category": "iced",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "459",
+   "name": "Iced Latte",
+   "option": "",
+   "price": 3.5,
+   "category": "iced",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "353",
+   "name": "Iced Vanilla Latte",
+   "option": "",
+   "price": 4.0,
+   "category": "iced",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "354",
+   "name": "Iced Caramel Latte",
+   "option": "",
+   "price": 4.0,
+   "category": "iced",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "460",
+   "name": "Iced Spanish Latte",
+   "option": "",
+   "price": 4.0,
+   "category": "iced",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "461",
+   "name": "Iced Coconut Latte",
+   "option": "",
+   "price": 4.0,
+   "category": "iced",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "462",
+   "name": "Iced Banana Latte",
+   "option": "",
+   "price": 5.0,
+   "category": "iced",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "469",
+   "name": "Iced Mocha Latte",
+   "option": "",
+   "price": 5.0,
+   "category": "iced",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "466",
+   "name": "Iced Honey Latte",
+   "option": "",
+   "price": 5.0,
+   "category": "iced",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "463",
+   "name": "Iced Baklava Latte",
+   "option": "",
+   "price": 5.5,
+   "category": "iced",
+   "description": "",
+   "tags": [
+    "signature"
+   ],
+   "visible": true
+  },
+  {
+   "code": "464",
+   "name": "Iced Mhalabiya Latte",
+   "option": "",
+   "price": 5.0,
+   "category": "iced",
+   "description": "",
+   "tags": [
+    "signature"
+   ],
+   "visible": true
+  },
+  {
+   "code": "465",
+   "name": "Iced Date Latte",
+   "option": "",
+   "price": 5.5,
+   "category": "iced",
+   "description": "",
+   "tags": [
+    "signature"
+   ],
+   "visible": true
+  },
+  {
+   "code": "430",
+   "name": "Caramel Frappuccino",
+   "option": "",
+   "price": 4.0,
+   "category": "iced",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "429",
+   "name": "Iced Matcha",
+   "option": "",
+   "price": 4.0,
+   "category": "iced",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "468",
+   "name": "Iced Sweet Matcha",
+   "option": "",
+   "price": 5.0,
+   "category": "iced",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "470",
+   "name": "Sunset",
+   "option": "",
+   "price": 5.0,
+   "category": "mocktails",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "471",
+   "name": "Dragon Fizz",
+   "option": "",
+   "price": 5.0,
+   "category": "mocktails",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "475",
+   "name": "Indigo",
+   "option": "",
+   "price": 5.0,
+   "category": "mocktails",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "476",
+   "name": "Blue Lagoon",
+   "option": "",
+   "price": 4.0,
+   "category": "mocktails",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "474",
+   "name": "Tropical Spritz",
+   "option": "",
+   "price": 4.0,
+   "category": "mocktails",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "424",
+   "name": "Mojito",
+   "option": "",
+   "price": 4.0,
+   "category": "mocktails",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "472",
+   "name": "Wild Berry Mojito",
+   "option": "",
+   "price": 4.0,
+   "category": "mocktails",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "473",
+   "name": "Kiwi Mojito",
+   "option": "",
+   "price": 4.0,
+   "category": "mocktails",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "433",
+   "name": "Mixed Berries Tropical",
+   "option": "",
+   "price": 3.0,
+   "category": "mocktails",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "483",
+   "name": "Orange Juice",
+   "option": "",
+   "price": 3.0,
+   "category": "juices",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "92",
+   "name": "Carrot Juice",
+   "option": "",
+   "price": 2.72,
+   "category": "juices",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "409",
+   "name": "Fresh Apple Juice",
+   "option": "",
+   "price": 2.78,
+   "category": "juices",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "158",
+   "name": "Strawberry Juice",
+   "option": "Small",
+   "price": 2.5,
+   "category": "juices",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "93",
+   "name": "Strawberry Juice",
+   "option": "Large",
+   "price": 3.39,
+   "category": "juices",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "90",
+   "name": "Lemonade",
+   "option": "",
+   "price": 2.72,
+   "category": "juices",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "166",
+   "name": "Polo Lemonade",
+   "option": "",
+   "price": 3.0,
+   "category": "juices",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "117",
+   "name": "Fruit Cocktail",
+   "option": "",
+   "price": 4.5,
+   "category": "juices",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "308",
+   "name": "Avocado Cocktail",
+   "option": "",
+   "price": 5.5,
+   "category": "juices",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "432",
+   "name": "Smoothie",
+   "option": "",
+   "price": 4.44,
+   "category": "juices",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "94",
+   "name": "Banana Milkshake",
+   "option": "",
+   "price": 4.5,
+   "category": "juices",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "159",
+   "name": "Strawberry Milkshake",
+   "option": "",
+   "price": 4.5,
+   "category": "juices",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "481",
+   "name": "Soft Drink",
+   "option": "",
+   "price": 2.0,
+   "category": "soft",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "477",
+   "name": "Iced Tea",
+   "option": "Peach",
+   "price": 3.0,
+   "category": "soft",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "478",
+   "name": "Iced Tea",
+   "option": "Lemon",
+   "price": 3.0,
+   "category": "soft",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "163",
+   "name": "Lipton Ice Tea",
+   "option": "",
+   "price": 2.0,
+   "category": "soft",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "482",
+   "name": "Red Bull",
+   "option": "",
+   "price": 3.0,
+   "category": "soft",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "406",
+   "name": "Bom Bom",
+   "option": "",
+   "price": 2.0,
+   "category": "soft",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "407",
+   "name": "Dark Blue",
+   "option": "",
+   "price": 2.0,
+   "category": "soft",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "371",
+   "name": "Mr Juice",
+   "option": "",
+   "price": 0.67,
+   "category": "soft",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "479",
+   "name": "Water",
+   "option": "Small",
+   "price": 1.0,
+   "category": "soft",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "480",
+   "name": "Sparkling Water",
+   "option": "",
+   "price": 1.5,
+   "category": "soft",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "95",
+   "name": "Perrier",
+   "option": "",
+   "price": 2.0,
+   "category": "soft",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "380",
+   "name": "Tonic Water",
+   "option": "",
+   "price": 1.2,
+   "category": "soft",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "59",
+   "name": "Local Beer",
+   "option": "",
+   "price": 3.0,
+   "category": "beer",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "63",
+   "name": "Imported Beer",
+   "option": "",
+   "price": 3.5,
+   "category": "beer",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "60",
+   "name": "Mexican Beer",
+   "option": "",
+   "price": 3.0,
+   "category": "beer",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "186",
+   "name": "Laziza",
+   "option": "",
+   "price": 2.5,
+   "category": "beer",
+   "description": "Non-alcoholic",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "324",
+   "name": "House Wine",
+   "option": "Glass",
+   "price": 3.0,
+   "category": "wine",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "74",
+   "name": "House Wine",
+   "option": "½ Bottle",
+   "price": 5.5,
+   "category": "wine",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "75",
+   "name": "House Wine",
+   "option": "Bottle",
+   "price": 8.0,
+   "category": "wine",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "362",
+   "name": "Ksara Sunset",
+   "option": "Glass",
+   "price": 3.0,
+   "category": "wine",
+   "description": "Rosé",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "360",
+   "name": "Ksara Sunset",
+   "option": "½ Bottle",
+   "price": 8.0,
+   "category": "wine",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "361",
+   "name": "Ksara Sunset",
+   "option": "Bottle",
+   "price": 11.0,
+   "category": "wine",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "363",
+   "name": "Ksara Réserve du Couvent",
+   "option": "Glass",
+   "price": 3.0,
+   "category": "wine",
+   "description": "Red",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "364",
+   "name": "Ksara Réserve du Couvent",
+   "option": "½ Bottle",
+   "price": 8.0,
+   "category": "wine",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "365",
+   "name": "Ksara Réserve du Couvent",
+   "option": "Bottle",
+   "price": 11.0,
+   "category": "wine",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "366",
+   "name": "Ksara Blanc de Blancs",
+   "option": "Glass",
+   "price": 3.0,
+   "category": "wine",
+   "description": "White",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "367",
+   "name": "Ksara Blanc de Blancs",
+   "option": "½ Bottle",
+   "price": 8.0,
+   "category": "wine",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "368",
+   "name": "Ksara Blanc de Blancs",
+   "option": "Bottle",
+   "price": 11.0,
+   "category": "wine",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "76",
+   "name": "Arak",
+   "option": "Glass",
+   "price": 1.78,
+   "category": "spirits",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "77",
+   "name": "Arak",
+   "option": "¼ Bottle",
+   "price": 3.5,
+   "category": "spirits",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "78",
+   "name": "Arak",
+   "option": "½ Bottle",
+   "price": 6.0,
+   "category": "spirits",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "79",
+   "name": "Arak",
+   "option": "Bottle",
+   "price": 9.0,
+   "category": "spirits",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "80",
+   "name": "Arak Extra",
+   "option": "Glass",
+   "price": 2.0,
+   "category": "spirits",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "81",
+   "name": "Arak Extra",
+   "option": "¼ Bottle",
+   "price": 6.5,
+   "category": "spirits",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "82",
+   "name": "Arak Extra",
+   "option": "½ Bottle",
+   "price": 9.5,
+   "category": "spirits",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "83",
+   "name": "Arak Extra",
+   "option": "Bottle",
+   "price": 14.0,
+   "category": "spirits",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "66",
+   "name": "Whisky",
+   "option": "Glass",
+   "price": 2.28,
+   "category": "spirits",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "67",
+   "name": "Whisky",
+   "option": "¼ Bottle",
+   "price": 6.5,
+   "category": "spirits",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "68",
+   "name": "Whisky",
+   "option": "½ Bottle",
+   "price": 10.75,
+   "category": "spirits",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "69",
+   "name": "Whisky",
+   "option": "Bottle",
+   "price": 19.0,
+   "category": "spirits",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "70",
+   "name": "Whisky Black",
+   "option": "Glass",
+   "price": 4.0,
+   "category": "spirits",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "71",
+   "name": "Whisky Black",
+   "option": "¼ Bottle",
+   "price": 12.0,
+   "category": "spirits",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "72",
+   "name": "Whisky Black",
+   "option": "½ Bottle",
+   "price": 21.0,
+   "category": "spirits",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "73",
+   "name": "Whisky Black",
+   "option": "Bottle",
+   "price": 38.0,
+   "category": "spirits",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "114",
+   "name": "Vodka",
+   "option": "Glass",
+   "price": 3.0,
+   "category": "spirits",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "115",
+   "name": "Vodka",
+   "option": "½ Bottle",
+   "price": 11.0,
+   "category": "spirits",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "116",
+   "name": "Vodka",
+   "option": "Bottle",
+   "price": 20.0,
+   "category": "spirits",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "64",
+   "name": "Gin",
+   "option": "Glass",
+   "price": 1.66,
+   "category": "spirits",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "84",
+   "name": "Arguileh",
+   "option": "Classic",
+   "price": 4.44,
+   "category": "arguileh",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "405",
+   "name": "Arguileh",
+   "option": "Nakhla",
+   "price": 4.44,
+   "category": "arguileh",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "164",
+   "name": "Arguileh Head Change",
+   "option": "",
+   "price": 2.22,
+   "category": "arguileh",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "321",
+   "name": "Disposable Hose",
+   "option": "",
+   "price": 0.78,
+   "category": "arguileh",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "488",
+   "name": "Extra Espresso Shot",
+   "option": "",
+   "price": 1.0,
+   "category": "extras",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "486",
+   "name": "Almond Milk",
+   "option": "",
+   "price": 2.0,
+   "category": "extras",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "485",
+   "name": "Skimmed / Lactose-free Milk",
+   "option": "",
+   "price": 0.5,
+   "category": "extras",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "487",
+   "name": "Flavoured Syrup",
+   "option": "",
+   "price": 0.5,
+   "category": "extras",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "489",
+   "name": "Decaf Coffee",
+   "option": "",
+   "price": 0.5,
+   "category": "extras",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "325",
+   "name": "Extra Sauce",
+   "option": "",
+   "price": 0.5,
+   "category": "extras",
+   "description": "",
+   "tags": [],
+   "visible": true
+  },
+  {
+   "code": "27",
+   "name": "Quinwa Salad",
+   "option": "",
+   "price": 7.0,
+   "category": "salads",
+   "description": "",
+   "tags": [],
+   "visible": false
+  },
+  {
+   "code": "62",
+   "name": "Non-Alcohlic Beer",
+   "option": "",
+   "price": 2.5,
+   "category": "spirits",
+   "description": "",
+   "tags": [],
+   "visible": false
+  },
+  {
+   "code": "65",
+   "name": "Red Bull",
+   "option": "",
+   "price": 2.5,
+   "category": "spirits",
+   "description": "",
+   "tags": [],
+   "visible": false
+  },
+  {
+   "code": "85",
+   "name": "Arguileh+Nes.",
+   "option": "",
+   "price": 4.44,
+   "category": "arguileh",
+   "description": "",
+   "tags": [],
+   "visible": false
+  },
+  {
+   "code": "87",
+   "name": "Soft Drinks",
+   "option": "",
+   "price": 1.33,
+   "category": "soft",
+   "description": "",
+   "tags": [],
+   "visible": false
+  },
+  {
+   "code": "88",
+   "name": "Water (Small)",
+   "option": "",
+   "price": 0.5,
+   "category": "soft",
+   "description": "",
+   "tags": [],
+   "visible": false
+  },
+  {
+   "code": "89",
+   "name": "Water (Large)",
+   "option": "",
+   "price": 1.0,
+   "category": "soft",
+   "description": "",
+   "tags": [],
+   "visible": false
+  },
+  {
+   "code": "91",
+   "name": "Orange Juice",
+   "option": "",
+   "price": 2.72,
+   "category": "soft",
+   "description": "",
+   "tags": [],
+   "visible": false
+  },
+  {
+   "code": "96",
+   "name": "Tea",
+   "option": "",
+   "price": 1.5,
+   "category": "hot",
+   "description": "",
+   "tags": [],
+   "visible": false
+  },
+  {
+   "code": "98",
+   "name": "Coffee",
+   "option": "",
+   "price": 1.5,
+   "category": "hot",
+   "description": "",
+   "tags": [],
+   "visible": false
+  },
+  {
+   "code": "102",
+   "name": "Fresh Juice Small",
+   "option": "",
+   "price": 2.0,
+   "category": "soft",
+   "description": "",
+   "tags": [],
+   "visible": false
+  },
+  {
+   "code": "106",
+   "name": "Ice Cream Vanl-Scoop",
+   "option": "",
+   "price": 1.5,
+   "category": "desserts",
+   "description": "",
+   "tags": [],
+   "visible": false
+  },
+  {
+   "code": "124",
+   "name": "B.Day Service",
+   "option": "",
+   "price": 3.0,
+   "category": "spirits",
+   "description": "",
+   "tags": [],
+   "visible": false
+  },
+  {
+   "code": "150",
+   "name": "B.D.Meal+Serv.",
+   "option": "",
+   "price": 10.0,
+   "category": "platters",
+   "description": "",
+   "tags": [],
+   "visible": false
+  },
+  {
+   "code": "151",
+   "name": "B.D Drink+Ser.",
+   "option": "",
+   "price": 5.0,
+   "category": "soft",
+   "description": "",
+   "tags": [],
+   "visible": false
+  },
+  {
+   "code": "500",
+   "name": "Martadela Work",
+   "option": "",
+   "price": 1.0,
+   "category": "platters",
+   "description": "",
+   "tags": [],
+   "visible": false
+  },
+  {
+   "code": "167",
+   "name": "Sandwich Chicken Staf",
+   "option": "",
+   "price": 4.0,
+   "category": "sandwiches",
+   "description": "",
+   "tags": [],
+   "visible": false
+  },
+  {
+   "code": "168",
+   "name": "Soft Drink Staff",
+   "option": "",
+   "price": 0.89,
+   "category": "soft",
+   "description": "",
+   "tags": [],
+   "visible": false
+  },
+  {
+   "code": "184",
+   "name": "American Cafe",
+   "option": "",
+   "price": 2.5,
+   "category": "hot",
+   "description": "",
+   "tags": [],
+   "visible": false
+  },
+  {
+   "code": "187",
+   "name": "Hainiken Beer",
+   "option": "",
+   "price": 0.0,
+   "category": "spirits",
+   "description": "",
+   "tags": [],
+   "visible": false
+  },
+  {
+   "code": "188",
+   "name": "Xxl",
+   "option": "",
+   "price": 0.0,
+   "category": "spirits",
+   "description": "",
+   "tags": [],
+   "visible": false
+  },
+  {
+   "code": "221",
+   "name": "Nescafe Staff",
+   "option": "",
+   "price": 0.56,
+   "category": "extras",
+   "description": "",
+   "tags": [],
+   "visible": false
+  },
+  {
+   "code": "307",
+   "name": "Free Sweet",
+   "option": "",
+   "price": 0.0,
+   "category": "desserts",
+   "description": "",
+   "tags": [],
+   "visible": false
+  },
+  {
+   "code": "311",
+   "name": "Fruit Salad Pcs.",
+   "option": "",
+   "price": 5.0,
+   "category": "desserts",
+   "description": "",
+   "tags": [],
+   "visible": false
+  },
+  {
+   "code": "319",
+   "name": "Rim Sparkling Water",
+   "option": "",
+   "price": 1.0,
+   "category": "soft",
+   "description": "",
+   "tags": [],
+   "visible": false
+  },
+  {
+   "code": "400",
+   "name": "Argili Off.",
+   "option": "",
+   "price": 3.33,
+   "category": "arguileh",
+   "description": "",
+   "tags": [],
+   "visible": false
+  },
+  {
+   "code": "401",
+   "name": "Sandwich Chicken Off.",
+   "option": "",
+   "price": 5.0,
+   "category": "sandwiches",
+   "description": "",
+   "tags": [],
+   "visible": false
+  },
+  {
+   "code": "402",
+   "name": "Mhamara Off.",
+   "option": "",
+   "price": 5.0,
+   "category": "pizza",
+   "description": "",
+   "tags": [],
+   "visible": false
+  },
+  {
+   "code": "403",
+   "name": "Potato Plate Off.",
+   "option": "",
+   "price": 3.28,
+   "category": "platters",
+   "description": "",
+   "tags": [],
+   "visible": false
+  },
+  {
+   "code": "404",
+   "name": "Sandw.Potato Off.",
+   "option": "",
+   "price": 2.22,
+   "category": "sandwiches",
+   "description": "",
+   "tags": [],
+   "visible": false
+  },
+  {
+   "code": "501",
+   "name": "Cheese Work",
+   "option": "",
+   "price": 1.0,
+   "category": "platters",
+   "description": "",
+   "tags": [],
+   "visible": false
+  },
+  {
+   "code": "502",
+   "name": "Labneh Work",
+   "option": "",
+   "price": 1.5,
+   "category": "platters",
+   "description": "",
+   "tags": [],
+   "visible": false
+  },
+  {
+   "code": "503",
+   "name": "Hommos Work",
+   "option": "",
+   "price": 1.5,
+   "category": "platters",
+   "description": "",
+   "tags": [],
+   "visible": false
+  },
+  {
+   "code": "504",
+   "name": "Potato Work",
+   "option": "",
+   "price": 2.78,
+   "category": "platters",
+   "description": "",
+   "tags": [],
+   "visible": false
+  },
+  {
+   "code": "505",
+   "name": "Meal Work",
+   "option": "",
+   "price": 1.75,
+   "category": "platters",
+   "description": "",
+   "tags": [],
+   "visible": false
+  },
+  {
+   "code": "506",
+   "name": "Tea Work",
+   "option": "",
+   "price": 0.5,
+   "category": "platters",
+   "description": "",
+   "tags": [],
+   "visible": false
+  },
+  {
+   "code": "507",
+   "name": "Coffee Work",
+   "option": "",
+   "price": 0.56,
+   "category": "platters",
+   "description": "",
+   "tags": [],
+   "visible": false
+  },
+  {
+   "code": "508",
+   "name": "Zaatar Work",
+   "option": "",
+   "price": 0.72,
+   "category": "platters",
+   "description": "",
+   "tags": [],
+   "visible": false
+  },
+  {
+   "code": "509",
+   "name": "Foul Work",
+   "option": "",
+   "price": 1.5,
+   "category": "platters",
+   "description": "",
+   "tags": [],
+   "visible": false
+  },
+  {
+   "code": "332",
+   "name": "Pizza Off.",
+   "option": "",
+   "price": 6.5,
+   "category": "pizza",
+   "description": "",
+   "tags": [],
+   "visible": false
+  },
+  {
+   "code": "336",
+   "name": "Nuggets 4Pcs.",
+   "option": "",
+   "price": 4.0,
+   "category": "starters",
+   "description": "",
+   "tags": [],
+   "visible": false
+  },
+  {
+   "code": "344",
+   "name": "Alfredo Pasta",
+   "option": "",
+   "price": 7.0,
+   "category": "platters",
+   "description": "",
+   "tags": [],
+   "visible": false
+  },
+  {
+   "code": "355",
+   "name": "Add Espresso Shot",
+   "option": "",
+   "price": 0.62,
+   "category": "soft",
+   "description": "",
+   "tags": [],
+   "visible": false
+  },
+  {
+   "code": "358",
+   "name": "Ksara Wine Btle",
+   "option": "",
+   "price": 3.96,
+   "category": "spirits",
+   "description": "",
+   "tags": [],
+   "visible": false
+  },
+  {
+   "code": "359",
+   "name": "Chair Rent+Coffee",
+   "option": "",
+   "price": 2.5,
+   "category": "hot",
+   "description": "",
+   "tags": [],
+   "visible": false
+  },
+  {
+   "code": "373",
+   "name": "Fahita Offer.",
+   "option": "",
+   "price": 6.0,
+   "category": "sandwiches",
+   "description": "",
+   "tags": [],
+   "visible": false
+  },
+  {
+   "code": "374",
+   "name": "Nescafe 2+3",
+   "option": "",
+   "price": 2.5,
+   "category": "hot",
+   "description": "",
+   "tags": [],
+   "visible": false
+  },
+  {
+   "code": "383",
+   "name": "Mocca",
+   "option": "",
+   "price": 4.0,
+   "category": "spirits",
+   "description": "",
+   "tags": [],
+   "visible": false
+  },
+  {
+   "code": "398",
+   "name": "Philadelphia Off.",
+   "option": "",
+   "price": 7.0,
+   "category": "pizza",
+   "description": "",
+   "tags": [],
+   "visible": false
+  },
+  {
+   "code": "399",
+   "name": "2 Eggs Work.",
+   "option": "",
+   "price": 2.0,
+   "category": "starters",
+   "description": "",
+   "tags": [],
+   "visible": false
+  },
+  {
+   "code": "510",
+   "name": "Nescafe.",
+   "option": "",
+   "price": 2.5,
+   "category": "hot",
+   "description": "",
+   "tags": [],
+   "visible": false
+  },
+  {
+   "code": "416",
+   "name": "Matcha Tea",
+   "option": "",
+   "price": 5.0,
+   "category": "soft",
+   "description": "",
+   "tags": [],
+   "visible": false
+  },
+  {
+   "code": "427",
+   "name": "Iced Americano",
+   "option": "",
+   "price": 4.0,
+   "category": "soft",
+   "description": "",
+   "tags": [],
+   "visible": false
+  },
+  {
+   "code": "431",
+   "name": "Iced Span.Latte.",
+   "option": "",
+   "price": 4.0,
+   "category": "soft",
+   "description": "",
+   "tags": [],
+   "visible": false
+  },
+  {
+   "code": "435",
+   "name": "Spanish Latte.",
+   "option": "",
+   "price": 3.0,
+   "category": "hot",
+   "description": "",
+   "tags": [],
+   "visible": false
+  }
+ ]
+}

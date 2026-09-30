@@ -1,0 +1,42 @@
+# Static site, no build step. Netlify just serves the folder.
+[build]
+  publish = "."
+  command = ""
+
+# Keep internal files off the public site
+[[redirects]]
+  from = "/tools/*"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/data/pos-export.xlsx"
+  to = "/404.html"
+  status = 404
+  force = true
+
+# When the customer has chosen a design, uncomment ONE of these so the
+# QR code / main address opens that menu directly (and set demo: false in assets/config.js).
+# The concept overview stays reachable at /concepts.html if you rename index.html.
+#
+# [[redirects]]
+#   from = "/"
+#   to = "/scroll/"
+#   status = 200
+
+# Menu data must always be fresh; fonts & images can be cached
+[[headers]]
+  for = "/data/*"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/assets/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/manage/*"
+  [headers.values]
+    X-Robots-Tag = "noindex"

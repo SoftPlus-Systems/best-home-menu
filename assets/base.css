@@ -1,0 +1,50 @@
+/* Shared tokens + reset. Light mode only (by design). */
+/* Self-hosted fonts (no third-party requests) */
+@font-face { font-family: "Jost"; font-style: normal; font-weight: 400 700; font-display: swap; src: url(fonts/jost.woff2) format("woff2"); }
+@font-face { font-family: "Fraunces"; font-style: normal; font-weight: 300 700; font-display: swap; src: url(fonts/fraunces.woff2) format("woff2"); }
+@font-face { font-family: "Fraunces"; font-style: italic; font-weight: 300 600; font-display: swap; src: url(fonts/fraunces-italic.woff2) format("woff2"); }
+
+:root {
+  color-scheme: light;
+  --navy: #253879;
+  --navy-ink: #1a2757;
+  --navy-50: #eef1fa;
+  --navy-100: #dde3f4;
+  --red: #c22025;
+  --red-50: #fdeeee;
+  --ink: #161a2b;
+  --ink-2: #4a5068;
+  --ink-3: #7b8199;
+  --line: #e7e9f0;
+  --bg: #ffffff;
+  --bg-2: #f6f7fb;
+  --radius: 16px;
+  --shadow-sm: 0 1px 2px rgba(22, 26, 43, .06), 0 1px 1px rgba(22, 26, 43, .04);
+  --shadow: 0 10px 30px -12px rgba(37, 56, 121, .22), 0 2px 6px rgba(22, 26, 43, .05);
+  --font: "Jost", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --safe-b: env(safe-area-inset-bottom, 0px);
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation: none !important; transition: none !important; } }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font); font-size: 16px; line-height: 1.45; -webkit-font-smoothing: antialiased; -webkit-tap-highlight-color: transparent; }
+img, svg { display: block; }
+button, input { font: inherit; color: inherit; }
+button { cursor: pointer; background: none; border: 0; padding: 0; }
+a { color: inherit; }
+.ico { width: 24px; height: 24px; flex: none; }
+.ico-s { width: 16px; height: 16px; flex: none; display: inline-block; vertical-align: -3px; margin-right: 6px; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+:focus-visible { outline: 2.5px solid var(--navy); outline-offset: 2px; border-radius: 8px; }
+.tabnum { font-variant-numeric: tabular-nums; }
+
+/* loading skeleton */
+.bh-loading { display: grid; place-items: center; min-height: 60vh; color: var(--ink-3); gap: 12px; }
+.bh-spin { width: 28px; height: 28px; border: 2.5px solid var(--navy-100); border-top-color: var(--navy); border-radius: 50%; animation: bhspin .8s linear infinite; }
+@keyframes bhspin { to { transform: rotate(360deg); } }
+
+/* "back to concepts" pill shown only while presenting the demo */
+.demo-pill { position: fixed; left: 12px; bottom: calc(12px + var(--safe-b)); z-index: 90; display: inline-flex; align-items: center; gap: 4px; padding: 8px 12px 8px 8px; border-radius: 999px; background: rgba(22, 26, 43, .86); color: #fff; font-size: 13px; text-decoration: none; backdrop-filter: blur(8px); box-shadow: var(--shadow); }
+.demo-pill .ico { width: 18px; height: 18px; }
+.preview-bar { position: relative; z-index: 100; background: #fff6d6; color: #6b5200; text-align: center; font-size: 13px; padding: 6px 12px; border-bottom: 1px solid #f0dc92; }
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; appearance: none; }

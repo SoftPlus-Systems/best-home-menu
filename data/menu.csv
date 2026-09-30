@@ -1,0 +1,311 @@
+code,category,name,option,price,description,tags,visible
+11,Starters,Garlic Bread,,4.0,,,yes
+12,Starters,Spring Rolls,,1.28,,,yes
+13,Starters,French Fries,Small,2.78,,,yes
+14,Starters,French Fries,Plate,3.78,,,yes
+347,Starters,Potato Wedges,,4.5,,,yes
+395,Starters,Potato Wedges with Cheddar,,6.0,,,yes
+322,Starters,Spicy Potatoes,,4.0,,,yes
+15,Starters,Baked Potato,,3.5,,,yes
+16,Starters,Cheese Rolls,,0.89,,,yes
+20,Starters,Sambousek,,1.17,,,yes
+180,Starters,Spinach Pie,,1.11,,,yes
+181,Starters,Pumpkin Kibbeh,,1.11,,,yes
+17,Starters,Hommos,,2.5,,,yes
+173,Starters,Hommos with Awarma,,5.5,,,yes
+113,Starters,Moutabal,,2.5,,,yes
+183,Starters,Mhammara,,3.61,,,yes
+182,Starters,Eggplant Msakaa,,2.5,,,yes
+132,Starters,Grape Leaves,,3.5,,,yes
+18,Starters,Foul Moudammas,,4.0,Served with fresh vegetables,,yes
+385,Starters,Labneh,,3.0,,,yes
+386,Starters,Cheese Plate,,4.0,,,yes
+384,Starters,Eggs,3 eggs,4.78,,,yes
+19,Starters,Halabieh,,1.5,,,yes
+342,Starters,Chicken Nuggets,4 pcs,4.0,,,yes
+341,Starters,Chicken Crispy,4 pcs,6.0,,,yes
+348,Starters,Mozzarella Sticks,5 pcs,4.5,,,yes
+369,Starters,Grilled Halloumi,4 pcs,6.0,,,yes
+179,Starters,Calamari,4 pcs,5.0,,,yes
+125,Starters,Termos,,1.0,Lupini beans,,yes
+126,Starters,Carrot Sticks,,1.0,,,yes
+23,Starters,Mixed Nuts,Regular,2.22,,,yes
+24,Starters,Mixed Nuts,Large,4.0,,,yes
+1,Salads,Caesar Salad,,8.0,,,yes
+2,Salads,Fattoush,Large,6.0,,,yes
+153,Salads,Fattoush,Small,4.44,,,yes
+161,Salads,Tabbouleh,Large,6.67,,,yes
+340,Salads,Tabbouleh,Small,5.0,,,yes
+3,Salads,Greek Salad,,6.0,,,yes
+154,Salads,Oriental Salad,,5.0,,,yes
+5,Salads,Chef Salad,,6.5,,,yes
+7,Salads,Panaché Salad,,9.0,,,yes
+4,Salads,Tuna Salad,,8.0,,,yes
+390,Salads,Crab Salad,,7.5,,,yes
+337,Salads,Quinoa Salad,,7.0,,,yes
+331,Salads,Kale Salad,,6.0,,,yes
+377,Salads,Chicken Kale Salad,,8.0,,,yes
+339,Salads,Rocca Salad,,4.0,,,yes
+351,Salads,Rocca & Halloumi,,6.0,,,yes
+9,Salads,Russian Salad,,4.0,,,yes
+10,Salads,Coleslaw,,4.5,,,yes
+372,Salads,Vegetable Plate,,2.0,,,yes
+30,Pizza & Manakish,Best Pizza,,9.0,Our house pizza,signature,yes
+155,Pizza & Manakish,Margherita Pizza,,7.0,,,yes
+26,Pizza & Manakish,Classic Pizza,,8.0,,,yes
+25,Pizza & Manakish,Vegetarian Pizza,,7.5,,,yes
+28,Pizza & Manakish,Pepperoni Pizza,,9.0,,,yes
+156,Pizza & Manakish,Chicken Pizza,,9.0,,,yes
+338,Pizza & Manakish,Mexican Chicken Pizza,,9.0,,,yes
+29,Pizza & Manakish,Tuna Pizza,,8.0,,,yes
+349,Pizza & Manakish,Pesto Pizza,,8.0,,,yes
+350,Pizza & Manakish,Fig & Feta Pizza,,8.5,,,yes
+330,Pizza & Manakish,Hot Dog Pizza,,8.0,,,yes
+21,Pizza & Manakish,Manakish Zaatar,,1.5,,,yes
+22,Pizza & Manakish,Manakish Cheese,,3.33,,,yes
+370,Pizza & Manakish,Manakish Labneh & Zaatar,,3.5,,,yes
+329,Pizza & Manakish,Mhammara & Cheese,,5.0,,,yes
+36,Sandwiches & Burgers,Hamburger,,6.0,,,yes
+38,Sandwiches & Burgers,Cheeseburger,,6.5,,,yes
+39,Sandwiches & Burgers,Chicken Burger,,5.5,,,yes
+376,Sandwiches & Burgers,Chicken Breast Burger,,6.5,,,yes
+393,Sandwiches & Burgers,Zinger Burger,,7.0,,,yes
+334,Sandwiches & Burgers,Mexican Chicken Burger,,6.5,,,yes
+335,Sandwiches & Burgers,Mexican Beef Burger,,7.0,,,yes
+37,Sandwiches & Burgers,Fish Burger,,5.5,,,yes
+32,Sandwiches & Burgers,Tawouk Sandwich,,5.0,,,yes
+33,Sandwiches & Burgers,Kafta Sandwich,,7.0,,,yes
+34,Sandwiches & Burgers,Fajita Sandwich,,7.0,,,yes
+392,Sandwiches & Burgers,Philadelphia Sandwich,,8.0,,,yes
+387,Sandwiches & Burgers,Meat Sandwich,,8.0,,,yes
+31,Sandwiches & Burgers,Hot Dog Sandwich,,4.0,,,yes
+35,Sandwiches & Burgers,Potato Sandwich,,2.78,,,yes
+42,Submarines,Best Sub,,8.0,Our house submarine,signature,yes
+40,Submarines,Chicken Sub,,7.0,,,yes
+41,Submarines,Tuna Sub,,7.0,,,yes
+411,Combo Meals,Burger Combo,,6.5,"Hamburger, fries & Pepsi",,yes
+413,Combo Meals,Chicken Burger Combo,,6.0,"Chicken burger, fries & Pepsi",,yes
+414,Combo Meals,Tawouk Combo,,7.5,"Tawouk sandwich, fries & a drink",,yes
+314,Combo Meals,Chicken Sandwich Meal,,7.0,,,yes
+415,Combo Meals,Nuggets Combo,,7.0,"Chicken nuggets, fries & Pepsi",,yes
+410,Combo Meals,Pizza Combo,,7.0,Pizza & Pepsi,,yes
+53,Platters,Mixed Grill,,13.0,,,yes
+323,Platters,Grilled Meat,,15.0,,,yes
+54,Platters,Grilled Steak,,16.0,,,yes
+55,Platters,Steak au Poivre,,17.0,,,yes
+56,Platters,Filet Mignon,,17.0,,,yes
+51,Platters,Mexican Steak,,17.0,,,yes
+43,Platters,Beef Escalope,,13.0,,,yes
+45,Platters,Beef Cordon Bleu,,16.0,,,yes
+44,Platters,Chicken Escalope,,10.0,,,yes
+320,Platters,Chicken Cordon Bleu,,12.0,,,yes
+49,Platters,Chicken Kiev,,10.0,,,yes
+50,Platters,Chicken Filet,,9.5,,,yes
+378,Platters,Mexican Chicken Filet,,10.5,,,yes
+327,Platters,Chicken Mustard,,10.0,,,yes
+328,Platters,Chicken Cream Sauce,,10.5,,,yes
+48,Platters,Tawouk Plate,,9.0,,,yes
+58,Platters,Fajita Plate,,11.0,,,yes
+172,Platters,Crispy Plate,,10.0,,,yes
+394,Platters,Zinger Plate,,7.5,,,yes
+418,Platters,Philadelphia Plate,,13.0,,,yes
+57,Platters,Chicken Nuggets Plate,,8.0,,,yes
+46,Platters,Hamburger Plate,,9.0,,,yes
+127,Platters,Cheeseburger Plate,,10.0,,,yes
+128,Platters,Chicken Burger Plate,,8.5,,,yes
+47,Platters,Fish Burger Plate,,9.0,,,yes
+52,Platters,Fish Filet,,11.0,,,yes
+379,Platters,Calamari Plate,,10.0,,,yes
+343,Pasta,Penne Arrabbiata,,6.5,,,yes
+178,Pasta,Pasta Alfredo,,7.0,,,yes
+157,Pasta,Chicken Alfredo,,10.0,,,yes
+177,Pasta,Pesto Pasta,,7.0,,,yes
+345,Pasta,Creamy Pesto Pasta,,8.0,,,yes
+408,Pasta,Chicken Pesto Pasta,,10.0,,,yes
+426,Desserts,Tiramisu,,5.0,,,yes
+420,Desserts,Cheesecake,,5.0,,,yes
+174,Desserts,Chocolate Fondant,,6.0,,,yes
+422,Desserts,Brownie,,3.5,,,yes
+104,Desserts,Cake,,4.0,,,yes
+421,Desserts,Waffle,,5.0,,,yes
+423,Desserts,Pancakes,,5.0,,,yes
+417,Desserts,Pain Perdu,,6.0,,,yes
+169,Desserts,Chocolate Crêpe,,4.5,,,yes
+309,Desserts,Special Crêpe,,5.78,,,yes
+381,Desserts,Chocolate Banana Roll,,5.78,,,yes
+162,Desserts,Chocolate Mousse,,5.5,,,yes
+160,Desserts,Banana Split,,6.0,,,yes
+356,Desserts,Affogato,,2.78,,,yes
+105,Desserts,Ice Cream,Per scoop,1.5,,,yes
+326,Desserts,Layali Lebnan,,1.5,,,yes
+108,Desserts,Mhalabieh,,1.5,,,yes
+110,Desserts,Meghli,,1.5,,,yes
+109,Desserts,Custard,,1.5,,,yes
+103,Desserts,Jello,,1.5,,,yes
+107,Desserts,Fruit Salad,,5.0,,,yes
+130,Desserts,Mixed Fruit,,2.5,,,yes
+310,Hot Drinks,Espresso,Single,1.5,,,yes
+457,Hot Drinks,Espresso,Double,2.5,,,yes
+450,Hot Drinks,Americano,,3.0,,,yes
+456,Hot Drinks,Lebanese Coffee,,1.5,,,yes
+99,Hot Drinks,Nescafé,,2.5,,,yes
+100,Hot Drinks,Cappuccino,,2.5,,,yes
+434,Hot Drinks,Flat White,,3.0,,,yes
+451,Hot Drinks,Latte,,3.5,,,yes
+453,Hot Drinks,Spanish Latte,,4.0,,,yes
+454,Hot Drinks,Coconut Latte,,4.0,,,yes
+455,Hot Drinks,Banana Latte,,5.0,,,yes
+452,Hot Drinks,Mocha Latte,,5.0,,,yes
+467,Hot Drinks,Sweet Matcha,,5.0,,,yes
+101,Hot Drinks,Hot Chocolate,,3.5,,,yes
+484,Hot Drinks,Tea,,1.5,,,yes
+97,Hot Drinks,Zhourat,,1.0,Lebanese herbal infusion,,yes
+458,Iced Coffee & Matcha,Iced Americano,,3.0,,,yes
+459,Iced Coffee & Matcha,Iced Latte,,3.5,,,yes
+353,Iced Coffee & Matcha,Iced Vanilla Latte,,4.0,,,yes
+354,Iced Coffee & Matcha,Iced Caramel Latte,,4.0,,,yes
+460,Iced Coffee & Matcha,Iced Spanish Latte,,4.0,,,yes
+461,Iced Coffee & Matcha,Iced Coconut Latte,,4.0,,,yes
+462,Iced Coffee & Matcha,Iced Banana Latte,,5.0,,,yes
+469,Iced Coffee & Matcha,Iced Mocha Latte,,5.0,,,yes
+466,Iced Coffee & Matcha,Iced Honey Latte,,5.0,,,yes
+463,Iced Coffee & Matcha,Iced Baklava Latte,,5.5,,signature,yes
+464,Iced Coffee & Matcha,Iced Mhalabiya Latte,,5.0,,signature,yes
+465,Iced Coffee & Matcha,Iced Date Latte,,5.5,,signature,yes
+430,Iced Coffee & Matcha,Caramel Frappuccino,,4.0,,,yes
+429,Iced Coffee & Matcha,Iced Matcha,,4.0,,,yes
+468,Iced Coffee & Matcha,Iced Sweet Matcha,,5.0,,,yes
+470,Mocktails,Sunset,,5.0,,,yes
+471,Mocktails,Dragon Fizz,,5.0,,,yes
+475,Mocktails,Indigo,,5.0,,,yes
+476,Mocktails,Blue Lagoon,,4.0,,,yes
+474,Mocktails,Tropical Spritz,,4.0,,,yes
+424,Mocktails,Mojito,,4.0,,,yes
+472,Mocktails,Wild Berry Mojito,,4.0,,,yes
+473,Mocktails,Kiwi Mojito,,4.0,,,yes
+433,Mocktails,Mixed Berries Tropical,,3.0,,,yes
+483,Fresh Juices & Shakes,Orange Juice,,3.0,,,yes
+92,Fresh Juices & Shakes,Carrot Juice,,2.72,,,yes
+409,Fresh Juices & Shakes,Fresh Apple Juice,,2.78,,,yes
+158,Fresh Juices & Shakes,Strawberry Juice,Small,2.5,,,yes
+93,Fresh Juices & Shakes,Strawberry Juice,Large,3.39,,,yes
+90,Fresh Juices & Shakes,Lemonade,,2.72,,,yes
+166,Fresh Juices & Shakes,Polo Lemonade,,3.0,,,yes
+117,Fresh Juices & Shakes,Fruit Cocktail,,4.5,,,yes
+308,Fresh Juices & Shakes,Avocado Cocktail,,5.5,,,yes
+432,Fresh Juices & Shakes,Smoothie,,4.44,,,yes
+94,Fresh Juices & Shakes,Banana Milkshake,,4.5,,,yes
+159,Fresh Juices & Shakes,Strawberry Milkshake,,4.5,,,yes
+481,Soft Drinks & Water,Soft Drink,,2.0,,,yes
+477,Soft Drinks & Water,Iced Tea,Peach,3.0,,,yes
+478,Soft Drinks & Water,Iced Tea,Lemon,3.0,,,yes
+163,Soft Drinks & Water,Lipton Ice Tea,,2.0,,,yes
+482,Soft Drinks & Water,Red Bull,,3.0,,,yes
+406,Soft Drinks & Water,Bom Bom,,2.0,,,yes
+407,Soft Drinks & Water,Dark Blue,,2.0,,,yes
+371,Soft Drinks & Water,Mr Juice,,0.67,,,yes
+479,Soft Drinks & Water,Water,Small,1.0,,,yes
+480,Soft Drinks & Water,Sparkling Water,,1.5,,,yes
+95,Soft Drinks & Water,Perrier,,2.0,,,yes
+380,Soft Drinks & Water,Tonic Water,,1.2,,,yes
+59,Beer,Local Beer,,3.0,,,yes
+63,Beer,Imported Beer,,3.5,,,yes
+60,Beer,Mexican Beer,,3.0,,,yes
+186,Beer,Laziza,,2.5,Non-alcoholic,,yes
+324,Wine,House Wine,Glass,3.0,,,yes
+74,Wine,House Wine,½ Bottle,5.5,,,yes
+75,Wine,House Wine,Bottle,8.0,,,yes
+362,Wine,Ksara Sunset,Glass,3.0,Rosé,,yes
+360,Wine,Ksara Sunset,½ Bottle,8.0,,,yes
+361,Wine,Ksara Sunset,Bottle,11.0,,,yes
+363,Wine,Ksara Réserve du Couvent,Glass,3.0,Red,,yes
+364,Wine,Ksara Réserve du Couvent,½ Bottle,8.0,,,yes
+365,Wine,Ksara Réserve du Couvent,Bottle,11.0,,,yes
+366,Wine,Ksara Blanc de Blancs,Glass,3.0,White,,yes
+367,Wine,Ksara Blanc de Blancs,½ Bottle,8.0,,,yes
+368,Wine,Ksara Blanc de Blancs,Bottle,11.0,,,yes
+76,Spirits,Arak,Glass,1.78,,,yes
+77,Spirits,Arak,¼ Bottle,3.5,,,yes
+78,Spirits,Arak,½ Bottle,6.0,,,yes
+79,Spirits,Arak,Bottle,9.0,,,yes
+80,Spirits,Arak Extra,Glass,2.0,,,yes
+81,Spirits,Arak Extra,¼ Bottle,6.5,,,yes
+82,Spirits,Arak Extra,½ Bottle,9.5,,,yes
+83,Spirits,Arak Extra,Bottle,14.0,,,yes
+66,Spirits,Whisky,Glass,2.28,,,yes
+67,Spirits,Whisky,¼ Bottle,6.5,,,yes
+68,Spirits,Whisky,½ Bottle,10.75,,,yes
+69,Spirits,Whisky,Bottle,19.0,,,yes
+70,Spirits,Whisky Black,Glass,4.0,,,yes
+71,Spirits,Whisky Black,¼ Bottle,12.0,,,yes
+72,Spirits,Whisky Black,½ Bottle,21.0,,,yes
+73,Spirits,Whisky Black,Bottle,38.0,,,yes
+114,Spirits,Vodka,Glass,3.0,,,yes
+115,Spirits,Vodka,½ Bottle,11.0,,,yes
+116,Spirits,Vodka,Bottle,20.0,,,yes
+64,Spirits,Gin,Glass,1.66,,,yes
+84,Arguileh,Arguileh,Classic,4.44,,,yes
+405,Arguileh,Arguileh,Nakhla,4.44,,,yes
+164,Arguileh,Arguileh Head Change,,2.22,,,yes
+321,Arguileh,Disposable Hose,,0.78,,,yes
+488,Extras & Add-ons,Extra Espresso Shot,,1.0,,,yes
+486,Extras & Add-ons,Almond Milk,,2.0,,,yes
+485,Extras & Add-ons,Skimmed / Lactose-free Milk,,0.5,,,yes
+487,Extras & Add-ons,Flavoured Syrup,,0.5,,,yes
+489,Extras & Add-ons,Decaf Coffee,,0.5,,,yes
+325,Extras & Add-ons,Extra Sauce,,0.5,,,yes
+27,Salads,Quinwa Salad,,7.0,,,no
+62,Spirits,Non-Alcohlic Beer,,2.5,,,no
+65,Spirits,Red Bull,,2.5,,,no
+85,Arguileh,Arguileh+Nes.,,4.44,,,no
+87,Soft Drinks & Water,Soft Drinks,,1.33,,,no
+88,Soft Drinks & Water,Water (Small),,0.5,,,no
+89,Soft Drinks & Water,Water (Large),,1.0,,,no
+91,Soft Drinks & Water,Orange Juice,,2.72,,,no
+96,Hot Drinks,Tea,,1.5,,,no
+98,Hot Drinks,Coffee,,1.5,,,no
+102,Soft Drinks & Water,Fresh Juice Small,,2.0,,,no
+106,Desserts,Ice Cream Vanl-Scoop,,1.5,,,no
+124,Spirits,B.Day Service,,3.0,,,no
+150,Platters,B.D.Meal+Serv.,,10.0,,,no
+151,Soft Drinks & Water,B.D Drink+Ser.,,5.0,,,no
+500,Platters,Martadela Work,,1.0,,,no
+167,Sandwiches & Burgers,Sandwich Chicken Staf,,4.0,,,no
+168,Soft Drinks & Water,Soft Drink Staff,,0.89,,,no
+184,Hot Drinks,American Cafe,,2.5,,,no
+187,Spirits,Hainiken Beer,,0.0,,,no
+188,Spirits,Xxl,,0.0,,,no
+221,Extras & Add-ons,Nescafe Staff,,0.56,,,no
+307,Desserts,Free Sweet,,0.0,,,no
+311,Desserts,Fruit Salad Pcs.,,5.0,,,no
+319,Soft Drinks & Water,Rim Sparkling Water,,1.0,,,no
+400,Arguileh,Argili Off.,,3.33,,,no
+401,Sandwiches & Burgers,Sandwich Chicken Off.,,5.0,,,no
+402,Pizza & Manakish,Mhamara Off.,,5.0,,,no
+403,Platters,Potato Plate Off.,,3.28,,,no
+404,Sandwiches & Burgers,Sandw.Potato Off.,,2.22,,,no
+501,Platters,Cheese Work,,1.0,,,no
+502,Platters,Labneh Work,,1.5,,,no
+503,Platters,Hommos Work,,1.5,,,no
+504,Platters,Potato Work,,2.78,,,no
+505,Platters,Meal Work,,1.75,,,no
+506,Platters,Tea Work,,0.5,,,no
+507,Platters,Coffee Work,,0.56,,,no
+508,Platters,Zaatar Work,,0.72,,,no
+509,Platters,Foul Work,,1.5,,,no
+332,Pizza & Manakish,Pizza Off.,,6.5,,,no
+336,Starters,Nuggets 4Pcs.,,4.0,,,no
+344,Platters,Alfredo Pasta,,7.0,,,no
+355,Soft Drinks & Water,Add Espresso Shot,,0.62,,,no
+358,Spirits,Ksara Wine Btle,,3.96,,,no
+359,Hot Drinks,Chair Rent+Coffee,,2.5,,,no
+373,Sandwiches & Burgers,Fahita Offer.,,6.0,,,no
+374,Hot Drinks,Nescafe 2+3,,2.5,,,no
+383,Spirits,Mocca,,4.0,,,no
+398,Pizza & Manakish,Philadelphia Off.,,7.0,,,no
+399,Starters,2 Eggs Work.,,2.0,,,no
+510,Hot Drinks,Nescafe.,,2.5,,,no
+416,Soft Drinks & Water,Matcha Tea,,5.0,,,no
+427,Soft Drinks & Water,Iced Americano,,4.0,,,no
+431,Soft Drinks & Water,Iced Span.Latte.,,4.0,,,no
+435,Hot Drinks,Spanish Latte.,,3.0,,,no

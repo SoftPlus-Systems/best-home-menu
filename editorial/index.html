@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Best Home · Menu</title>
+<meta name="description" content="The Best Home menu — food, coffee and drinks.">
+<meta name="theme-color" content="#fbf8f2">
+<link rel="icon" href="../assets/favicon.png">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+<link rel="preload" href="../assets/fonts/fraunces.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/jost.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/base.css">
+<style>
+  :root { --paper: #fbf8f2; --paper-2: #f3eee4; --rule: #e4ddcf; --serif: "Fraunces", Georgia, serif; }
+  body { background: var(--paper); }
+  .mast { text-align: center; padding: 40px 16px 26px; border-bottom: 1px solid var(--rule); }
+  .mast img { width: 132px; margin: 0 auto; }
+  .mast .kicker { margin-top: 18px; font-family: var(--serif); font-style: italic; font-size: 18px; color: var(--ink-2); }
+  .mast .rule { display: flex; align-items: center; gap: 14px; justify-content: center; margin-top: 12px; color: var(--ink-3); font-size: 12px; letter-spacing: .28em; text-transform: uppercase; }
+  .mast .rule::before, .mast .rule::after { content: ""; width: 40px; height: 1px; background: var(--rule); }
+
+  /* mobile sticky strip */
+  .strip { position: sticky; top: 0; z-index: 20; display: flex; align-items: center; gap: 10px; padding: 10px 16px; background: rgba(251,248,242,.94); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid var(--rule); }
+  .strip .now { flex: 1; min-width: 0; font-family: var(--serif); font-size: 18px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: var(--navy-ink); }
+  .strip .now span { color: var(--red); font-size: 13px; font-family: var(--font); letter-spacing: .1em; margin-right: 8px; }
+  .btn { display: inline-flex; align-items: center; gap: 8px; height: 40px; padding: 0 14px; border-radius: 999px; border: 1px solid var(--rule); background: #fff; font-size: 14.5px; font-weight: 500; color: var(--ink); }
+  .btn .ico { width: 18px; height: 18px; }
+  .btn.icon { width: 40px; padding: 0; justify-content: center; }
+
+  .layout { max-width: 1180px; margin: 0 auto; padding: 0 16px; }
+  @media (min-width: 1000px) {
+    .strip { display: none; }
+    .layout { display: grid; grid-template-columns: 250px 1fr; gap: 64px; padding: 0 32px; }
+    .toc { position: sticky; top: 0; align-self: start; max-height: 100vh; overflow-y: auto; padding: 28px 0 70px; }
+  }
+  .toc { display: none; }
+  @media (min-width: 1000px) { .toc { display: block; } }
+  .toc h4 { margin: 0 0 12px; font-size: 12px; letter-spacing: .24em; text-transform: uppercase; color: var(--ink-3); font-weight: 500; }
+  .toc a { display: flex; gap: 12px; align-items: baseline; padding: 4px 10px; margin: 0 -10px; border-radius: 8px; text-decoration: none; color: var(--ink-2); font-size: 15px; transition: background .15s, color .15s; }
+  .toc a small { color: var(--ink-3); font-size: 11.5px; letter-spacing: .06em; width: 18px; font-variant-numeric: tabular-nums; }
+  .toc a:hover { background: var(--paper-2); }
+  .toc a.on { color: var(--navy-ink); background: #fff; box-shadow: var(--shadow-sm); }
+  .toc a.on small { color: var(--red); }
+  .toc .tools { display: flex; gap: 8px; margin-top: 20px; }
+  .toc .find { display: flex; align-items: center; gap: 8px; height: 40px; padding: 0 12px; border-radius: 12px; background: #fff; border: 1px solid var(--rule); margin-bottom: 18px; }
+  .toc .find .ico { width: 18px; height: 18px; color: var(--ink-3); }
+  .toc .find input { border: 0; outline: 0; background: none; min-width: 0; flex: 1; font-size: 15px; }
+
+  main { padding: 8px 0 100px; min-width: 0; }
+  section { padding: 44px 0 8px; scroll-margin-top: 64px; }
+  @media (min-width: 1000px) { section { scroll-margin-top: 10px; } }
+  .sh { display: grid; grid-template-columns: auto 1fr; gap: 0 16px; align-items: end; margin-bottom: 20px; padding-bottom: 14px; border-bottom: 1.5px solid var(--navy-ink); }
+  .sh .n { font-family: var(--serif); font-size: 15px; color: var(--red); letter-spacing: .08em; grid-row: span 2; align-self: start; padding-top: 10px; }
+  .sh h2 { margin: 0; font-family: var(--serif); font-weight: 400; font-size: clamp(32px, 8vw, 46px); line-height: 1; letter-spacing: -.02em; color: var(--navy-ink); font-variation-settings: "opsz" 144; }
+  .sh p { margin: 6px 0 0; font-family: var(--serif); font-style: italic; color: var(--ink-3); font-size: 15px; }
+  .items { columns: 1; column-gap: 56px; }
+  @media (min-width: 760px) { .items { columns: 2; } }
+  .it { break-inside: avoid; padding: 11px 0 12px; }
+  .row { display: flex; align-items: baseline; gap: 8px; }
+  .row .nm { font-size: 17px; font-weight: 500; color: var(--ink); }
+  .row .lead { flex: 1; min-width: 16px; border-bottom: 1.5px dotted #c9bfae; transform: translateY(-4px); }
+  .row .pr { font-family: var(--serif); font-size: 17px; color: var(--navy-ink); font-variant-numeric: tabular-nums lining-nums; white-space: nowrap; }
+  .it .ds { margin: 2px 0 0; font-family: var(--serif); font-style: italic; font-size: 14.5px; color: var(--ink-3); }
+  .it .star { color: var(--red); font-family: var(--serif); font-style: italic; font-size: 13px; margin-left: 6px; }
+  .vars { display: flex; flex-wrap: wrap; gap: 2px 16px; margin-top: 4px; font-size: 14px; color: var(--ink-2); }
+  .vars span b { font-family: var(--serif); font-weight: 400; color: var(--navy-ink); margin-left: 4px; font-variant-numeric: tabular-nums lining-nums; }
+  .note { text-align: center; margin: 60px 0 0; color: var(--ink-3); font-family: var(--serif); font-style: italic; }
+  .note .c { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 18px; margin-bottom: 10px; font-family: var(--font); font-style: normal; font-size: 14px; }
+  .note a { text-decoration: none; }
+  .hide { display: none !important; }
+  mark { background: #f9e3a0; color: inherit; }
+
+  /* index overlay (mobile) */
+  .ov { position: fixed; inset: 0; z-index: 95; background: var(--paper); display: flex; flex-direction: column; opacity: 0; pointer-events: none; transform: translateY(12px); transition: .25s; }
+  .ov.show { opacity: 1; pointer-events: auto; transform: none; }
+  .ov header { display: flex; align-items: center; gap: 10px; padding: 12px 16px; border-bottom: 1px solid var(--rule); }
+  .ov header .find { flex: 1; display: flex; align-items: center; gap: 8px; height: 44px; padding: 0 12px; border-radius: 12px; background: #fff; border: 1px solid var(--rule); }
+  .ov header .find .ico { width: 18px; height: 18px; color: var(--ink-3); }
+  .ov header input { border: 0; outline: 0; background: none; min-width: 0; flex: 1; font-size: 16px; }
+  .ov nav { overflow-y: auto; padding: 8px 16px 40px; }
+  .ov nav a { display: flex; align-items: baseline; gap: 14px; padding: 13px 0; border-bottom: 1px solid var(--rule); text-decoration: none; font-family: var(--serif); font-size: 24px; color: var(--navy-ink); }
+  .ov nav a small { font-family: var(--font); font-size: 12px; color: var(--red); letter-spacing: .1em; width: 22px; }
+  .ov nav a em { margin-left: auto; font-size: 14px; color: var(--ink-3); font-family: var(--font); font-style: normal; }
+
+  @media print {
+    @page { margin: 14mm; }
+    body { background: #fff; }
+    .strip, .toc, .demo-pill, .ov, .preview-bar { display: none !important; }
+    .layout { display: block; padding: 0; max-width: none; }
+    .mast { padding-top: 0; }
+    section { padding-top: 22px; break-inside: auto; }
+    .sh { break-after: avoid; }
+    .items { columns: 2; }
+  }
+</style>
+</head>
+<body>
+<header class="mast">
+  <img src="../assets/logo.png" alt="Best Home" width="132" height="81">
+  <div class="kicker">Our menu</div>
+  <div class="rule">Food · Coffee · Drinks</div>
+</header>
+<div class="strip">
+  <div class="now" id="now"></div>
+  <button class="btn" id="open-ov" type="button"><span data-i="search"></span>Menu</button>
+</div>
+<div class="layout">
+  <aside class="toc" id="toc"></aside>
+  <main id="main"><div class="bh-loading"><div class="bh-spin"></div>Loading menu…</div></main>
+</div>
+<div class="ov" id="ov" role="dialog" aria-modal="true" aria-label="Menu index">
+  <header><label class="find"><span data-i="search"></span><input id="q2" type="search" placeholder="Find a dish…" autocomplete="off"></label>
+    <button class="btn icon" id="close-ov" type="button" aria-label="Close" data-i="close"></button></header>
+  <nav id="ov-nav"></nav>
+</div>
+
+<script src="../assets/config.js"></script>
+<script src="../assets/icons.js"></script>
+<script src="../assets/menu-core.js"></script>
+<script>
+(async () => {
+  const $ = (s) => document.querySelector(s);
+  document.querySelectorAll("[data-i]").forEach((el) => el.innerHTML = BH.icon(el.dataset.i));
+  BH.chrome();
+  const menu = await BH.load();
+  const cats = menu.categories, { esc } = BH;
+  const num = (i) => String(i + 1).padStart(2, "0");
+  const pr = (n) => BH.price(n).replace(/\.00$/, "");
+
+  const itemHTML = (d) => {
+    const one = d.prices.length === 1, p0 = d.prices[0];
+    return `<div class="it">
+      <div class="row"><span class="nm">${esc(d.name)}${one && p0.label ? ` <span style="color:var(--ink-3);font-weight:400">(${esc(p0.label)})</span>` : ""}${d.tags.includes("signature") ? '<span class="star">house signature</span>' : ""}</span>
+      ${one ? `<span class="lead"></span><span class="pr">${pr(p0.price)}</span>` : ""}</div>
+      ${d.description ? `<p class="ds">${esc(d.description)}</p>` : ""}
+      ${one ? "" : `<div class="vars">${d.prices.map((p) => `<span>${esc(p.label)}<b>${pr(p.price)}</b></span>`).join("")}</div>`}</div>`;
+  };
+
+  $("#main").innerHTML = cats.map((c, i) => `<section id="${c.id}" data-i="${i}">
+      <div class="sh"><span class="n">${num(i)}</span><h2>${esc(c.name)}</h2><p>${c.items.length} selections</p></div>
+      <div class="items">${c.items.map(itemHTML).join("")}</div></section>`).join("") +
+    `<div class="note"><div class="c">${BH.contactHTML()}</div>All prices are in US dollars. Please let us know about any allergies.</div>`;
+
+  const links = cats.map((c, i) => `<a href="#${c.id}" data-c="${c.id}"><small>${num(i)}</small>${esc(c.name)}</a>`).join("");
+  $("#toc").innerHTML = `<h4>Contents</h4><label class="find"><span class="sr-only">Find</span>${BH.icon("search")}<input id="q1" type="search" placeholder="Find a dish…" autocomplete="off"></label>${links}
+    <div class="tools"><button class="btn" type="button" onclick="print()">${BH.icon("print")}Print menu</button></div>`;
+  $("#ov-nav").innerHTML = cats.map((c, i) => `<a href="#${c.id}"><small>${num(i)}</small>${esc(c.name)}<em>${c.items.length}</em></a>`).join("");
+
+  // filtering (shared by desktop & mobile search boxes)
+  function filter(q) {
+    q = q.trim().toLowerCase();
+    document.querySelectorAll("section").forEach((s) => {
+      const c = cats[+s.dataset.i]; let n = 0;
+      s.querySelectorAll(".it").forEach((el, k) => {
+        const ok = BH.matches(c.items[k], c, q); el.classList.toggle("hide", !ok); n += ok;
+      });
+      s.classList.toggle("hide", !n);
+    });
+    document.querySelectorAll("#ov-nav a, #toc a[data-c]").forEach((a) => {
+      const s = document.getElementById(a.getAttribute("href").slice(1));
+      a.classList.toggle("hide", s.classList.contains("hide"));
+    });
+  }
+  const sync = (e) => { $("#q1").value = $("#q2").value = e.target.value; filter(e.target.value); };
+  $("#q1").addEventListener("input", sync); $("#q2").addEventListener("input", sync);
+  $("#q2").addEventListener("keydown", (e) => { if (e.key === "Enter") { closeOv(); const s = document.querySelector("section:not(.hide)"); s && s.scrollIntoView(); } });
+
+  // overlay
+  const ov = $("#ov");
+  const closeOv = () => { ov.classList.remove("show"); document.body.style.overflow = ""; };
+  $("#open-ov").onclick = () => { ov.classList.add("show"); document.body.style.overflow = "hidden"; };
+  $("#close-ov").onclick = closeOv;
+  $("#ov-nav").addEventListener("click", (e) => e.target.closest("a") && closeOv());
+  addEventListener("keydown", (e) => e.key === "Escape" && closeOv());
+
+  // scroll-spy → sticky strip + contents
+  const now = $("#now");
+  const setNow = (i) => {
+    now.innerHTML = `<span>${num(i)}</span>${esc(cats[i].name)}`;
+    document.querySelectorAll("#toc a").forEach((a) => a.classList.toggle("on", a.dataset.c === cats[i].id));
+  };
+  const io = new IntersectionObserver((es) => {
+    const v = es.filter((e) => e.isIntersecting).sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top)[0];
+    if (v) setNow(+v.target.dataset.i);
+  }, { rootMargin: "-70px 0px -70% 0px" });
+  document.querySelectorAll("section").forEach((s) => io.observe(s));
+  setNow(0);
+  if (location.hash) { const el = document.getElementById(location.hash.slice(1)); el && el.scrollIntoView(); }
+})();
+</script>
+</body>
+</html>
