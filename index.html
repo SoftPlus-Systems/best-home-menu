@@ -30,7 +30,7 @@
   .search.has button { display: block; }
 
   h2.lbl { margin: 28px 0 12px; font-size: 13px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-3); }
-  .sig { display: flex; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; margin: 0 -16px; padding: 2px 16px 8px; scrollbar-width: none; }
+  .sig { display: flex; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; margin: 0 -16px; padding: 2px 16px 8px; scroll-padding-inline: 16px; scrollbar-width: none; }
   .sig::-webkit-scrollbar { display: none; }
   .sig-card { flex: none; width: 200px; scroll-snap-align: start; border-radius: 20px; padding: 16px; color: #fff; background: linear-gradient(145deg, var(--navy) 0%, #34489a 100%); position: relative; overflow: hidden; text-align: left; }
   .sig-card:nth-child(3n+2) { background: linear-gradient(145deg, var(--red) 0%, #d8454a 100%); }
@@ -103,6 +103,7 @@
   footer { text-align: center; color: var(--ink-3); font-size: 13.5px; padding: 32px 0 96px; }
   footer .c { display: flex; flex-wrap: wrap; gap: 8px 18px; justify-content: center; margin-bottom: 8px; }
   footer a { text-decoration: none; }
+  footer .dev { margin-top: 14px; font-size: 12px; letter-spacing: .02em; opacity: .8; }
 </style>
 </head>
 <body>
@@ -145,7 +146,7 @@
         <input id="q" type="search" placeholder="Search the menu" autocomplete="off" enterkeyhint="search" value="${esc(query)}">
         <button type="button" id="clr" aria-label="Clear">${icon("close")}</button></label>
       <div id="body"></div>
-      <footer><div class="c">${BH.contactHTML()}</div>All prices in US dollars.</footer>
+      <footer><div class="c">${BH.contactHTML()}</div>All prices in US dollars.<div class="dev">Developed by SoftPlus Systems</div></footer>
     </div></div>`;
     const body = document.getElementById("body"), q = document.getElementById("q"), sb = document.getElementById("search");
     const draw = () => {
